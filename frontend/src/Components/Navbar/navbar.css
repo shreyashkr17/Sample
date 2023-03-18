@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.NavPos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    background: linear-gradient(to top, rgba(150,222,191,1) 0%, rgba(75,183,189,1) 15%, rgba(88,49,165,1) 100%);
+}
+.Navbar{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Left Side of the Navbar */
+.left_nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:35%;
+    background-color: transparent;
+}
+.image_cont{
+    position: relative;
+    width: 25%;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+}
+.logoHead{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 20%; */
+}
+.naam_cont{
+    position: relative;
+    left: -20px;
+    width: 60%;
+    display:flex ;
+    justify-content: center;
+    align-content: center;
+}
+.naam{
+    color: white;
+    margin: auto;
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.2em;
+}
+
+
+
+
+
+
+/* Middle Side of the Navbar */
+.mid_nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    background-color: transparent;
+    justify-content: space-between;
+}
+.home{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.home a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    /* margin: auto; */
+    font-size: 1.3em;
+    opacity: 0.6;
+}
+.home a:hover{
+    opacity: 1;
+}
+.aboutUs{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.aboutUs a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    /* margin: auto; */
+    font-size: 1.3em;
+    opacity: 0.6;
+}
+.aboutUs a:hover{
+    opacity: 1;
+}
+.Videos{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.Videos a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    /* margin: auto; */
+    font-size: 1.3em;
+    opacity: 0.6;
+}
+.Videos a:hover{
+    opacity: 1;
+}
+.Search{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:center;
+    margin: auto;
+}
+.Search a{
+    color: white;
+    font-size: 1.3em;
+}
+
+
+
+
+/* Right Side of Navbar */
+.right_nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15%;
+    background-color: transparent;
+    justify-content: space-between;
+}
+.join_now_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+.join_btn{
+    color: black;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* Hamburger Menu from 780px */
+.ham_menu_cont{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:60%;
+    background-color: transparent;
+}
+.ham_menu{
+    background-color:transparent;
+    width: 10%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    left: 45%;
+}
+.menu{
+    color: white;
+    /* font-size: 2.2em; */
+}
+
+
+
+
+
+/* Responsive at 1300px to 1050px */
+@media screen and (max-width:1300px) {
+    .image_cont{
+        width: 23%;
+    }
+    .naam{
+        font-size: 1.8em;
+    }
+
+
+    .home a{
+        font-size: 1.1em;
+    }
+    .aboutUs a{
+        font-size: 1.1em;
+    }
+    .Videos a{
+        font-size: 1.1em;
+    }
+    .Search a{
+        font-size: 1.1em;
+    }
+
+    .join_btn{
+        font-size: 0.9em;
+        padding: 4px;
+    }
+}
+
+/* Responsive from 1050px to 780px */
+@media screen and (max-width:1050px) {
+    .left_nav{
+        width: 40%;
+    }
+    .image_cont{
+        width: 20%;
+    }
+    .naam{
+        font-size: 1.55em;
+    }
+
+
+
+    .mid_nav{
+        width: 45%;
+    }
+    .home a{
+        font-size: 1em;
+    }
+    .aboutUs a{
+        font-size: 1em;
+    }
+    .Videos a{
+        font-size: 1em;
+    }
+    .Search a{
+        font-size: 1em;
+    }
+    .join_btn{
+        font-size: 0.8em;
+        padding: 3px;
+    }
+}
+
+
+
+/* Responsive screen from 779px to */
+@media screen and (max-width:780px) {
+    .ham_menu_cont{
+        display: flex;
+    }
+    .image_cont{
+        width: 30%;
+    }
+
+    .mid_nav{
+        display: none;
+    }
+    .right_nav{
+        display: none;
+    }
+}
+@media screen and (max-width:650px) {
+    .naam{
+        font-size: 1.40em;
+    }
+    .image_cont{
+        width: 27%;
+    }
+    .naam_cont{
+        width: 73%;
+    }
+}
+@media screen and (max-width:480px) {
+    .naam{
+        font-size: 1.10em;
+    }
+    .naam_cont{
+        width: 75%;
+    }
+    .image_cont{
+        width: 25%;
+    }
+}
