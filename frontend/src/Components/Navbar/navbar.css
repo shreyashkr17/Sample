@@ -1,71 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
-.NavPos{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:column;
-    width: 100%;
-    height: 70%;
-    position: absolute;
-    background: linear-gradient(to top, rgba(150,222,191,1) 0%, rgba(75,183,189,1) 15%, rgba(88,49,165,1) 100%);
-}
 .Navbar{
     display: flex;
-    flex-wrap:wrap;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    height: 20%;
-    position: relative;
-    background-color: transparent;
+    height: 13%;
+    background: linear-gradient(to top, rgba(150,222,191,1) 0%, rgba(75,183,189,1) 15%, rgb(1, 20, 128) 100%);
+    position: absolute;
     overflow: hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 
 
 
-
-/* Left Side of the Navbar */
-.left_nav{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:35%;
-    background-color: transparent;
-}
-.image_cont{
-    position: relative;
+/* Left side of the navbar */
+.leftnav{
     width: 25%;
-    justify-items: center;
-    align-items: center;
-    display: flex;
-}
-.logoHead{
     position: relative;
-    width: 100%;
+    height: 100%;
+    background-color: transparent;
     display: flex;
     flex-wrap: wrap;
-    /* height: 20%; */
-}
-.naam_cont{
-    position: relative;
-    left: -20px;
-    width: 60%;
-    display:flex ;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
 }
-.naam{
-    color: white;
+.logo{
+    width: 30%;
+    height: 90%;
     margin: auto;
-    font-family: 'Prompt', sans-serif;
-    font-size: 2.2em;
+}
+.Header{
+    width: 65%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.Header h1{
+    color: white;
+    font-family: 'Yeseva One', cursive;
+    font-size: 2.5em;
+    letter-spacing: 2px;
 }
 
 
@@ -73,241 +56,247 @@
 
 
 
-/* Middle Side of the Navbar */
-.mid_nav{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+/* Mid side of the navbar */
+.midnav{
     width: 50%;
+    position: relative;
+    height: 100%;
     background-color: transparent;
-    justify-content: space-between;
-}
-.home{
-    display: flex;
-    justify-content:center;
-    align-content: center;
-    margin: auto;
-    flex-wrap: wrap;
-}
-.home a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Prompt', sans-serif;
-    /* margin: auto; */
-    font-size: 1.3em;
-    opacity: 0.6;
-}
-.home a:hover{
-    opacity: 1;
-}
-.aboutUs{
-    display: flex;
-    justify-content:center;
-    align-content: center;
-    margin: auto;
-    flex-wrap: wrap;
-}
-.aboutUs a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Prompt', sans-serif;
-    /* margin: auto; */
-    font-size: 1.3em;
-    opacity: 0.6;
-}
-.aboutUs a:hover{
-    opacity: 1;
-}
-.Videos{
-    display: flex;
-    justify-content:center;
-    align-content: center;
-    margin: auto;
-    flex-wrap: wrap;
-}
-.Videos a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Prompt', sans-serif;
-    /* margin: auto; */
-    font-size: 1.3em;
-    opacity: 0.6;
-}
-.Videos a:hover{
-    opacity: 1;
-}
-.Search{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content:center;
-    margin: auto;
-}
-.Search a{
-    color: white;
-    font-size: 1.3em;
-}
-
-
-
-
-/* Right Side of Navbar */
-.right_nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 15%;
-    background-color: transparent;
+    margin-left: 8%;
     justify-content: space-between;
 }
-.join_now_cont{
+.firstmid{
+    width: 20%;
+    background-color: transparent;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    margin: auto;
 }
-.join_btn{
-    color: black;
-    font-family: 'Prompt', sans-serif;
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 10px;
+.firstmid h2{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.3em;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.firstmid h2:hover{
+    opacity: 1;
+}
+.secondmid{
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.secondmid h2{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.3em;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.secondmid h2:hover{
+    opacity: 1;
+}
+.thirdmid{
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.thirdmid h2{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.3em;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.thirdmid h2:hover{
+    opacity: 1;
+}
+.fourthmid{
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.fourthmid h2{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.3em;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.fourthmid h2:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* Right Side of the navbar */
+.rightnav{
+    width: 17%;
+    position: relative;
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+.btn_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+.btn{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.1em;
+    padding: 4px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
 
+/* Hamburger display none  */
 
-
-/* Hamburger Menu from 780px */
-.ham_menu_cont{
+.hamburger{
     display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:60%;
-    background-color: transparent;
-}
-.ham_menu{
-    background-color:transparent;
-    width: 10%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    left: 45%;
-}
-.menu{
-    color: white;
-    /* font-size: 2.2em; */
 }
 
 
 
-
-
-/* Responsive at 1300px to 1050px */
+/* Responsive from 1300px to 1000px*/
 @media screen and (max-width:1300px) {
-    .image_cont{
-        width: 23%;
+    .Header h1{
+        font-size: 2.25em;
     }
-    .naam{
-        font-size: 1.8em;
-    }
-
-
-    .home a{
+    .firstmid h2{
         font-size: 1.1em;
     }
-    .aboutUs a{
+    .secondmid h2{
         font-size: 1.1em;
     }
-    .Videos a{
+    .thirdmid h2{
         font-size: 1.1em;
     }
-    .Search a{
+    .fourthmid h2{
         font-size: 1.1em;
     }
-
-    .join_btn{
-        font-size: 0.9em;
-        padding: 4px;
+    .btn{
+        font-size: 0.95em;
     }
 }
-
-/* Responsive from 1050px to 780px */
-@media screen and (max-width:1050px) {
-    .left_nav{
-        width: 40%;
+/* Responsive from 1000px to 850 px */
+@media screen and (max-width:1000px) {
+    .logo{
+        width: 35%;
+        height: 85%;
+        margin: auto;
     }
-    .image_cont{
-        width: 20%;
-    }
-    .naam{
-        font-size: 1.55em;
-    }
-
-
-
-    .mid_nav{
-        width: 45%;
-    }
-    .home a{
+    .firstmid h2{
         font-size: 1em;
     }
-    .aboutUs a{
+    .secondmid h2{
         font-size: 1em;
     }
-    .Videos a{
+    .thirdmid h2{
         font-size: 1em;
     }
-    .Search a{
+    .fourthmid h2{
         font-size: 1em;
     }
-    .join_btn{
-        font-size: 0.8em;
-        padding: 3px;
+    .Header h1{
+        margin-left:15% ;
+        font-size: 1.9em;
     }
 }
 
 
-
-/* Responsive screen from 779px to */
-@media screen and (max-width:780px) {
-    .ham_menu_cont{
-        display: flex;
+/* Responsive from 850 px */
+@media screen and (max-width:850px) {
+    .midnav{
+        display: none;
     }
-    .image_cont{
+    .rightnav{
+        display: none;
+    }
+    .leftnav{
         width: 30%;
     }
-
-    .mid_nav{
-        display: none;
+    .logo{
+        width: 35%;
+        height: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
     }
-    .right_nav{
-        display: none;
+    .hamburger{
+        width: 20%;
+        height: 100%;
+        position: relative;
+        background-color: transparent;
+        display: flex;
+        margin-left:auto ;
+    }
+    .menucont{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    .menu{
+        margin-left: 25%;
+        color: white;
+        font-size: large;
     }
 }
-@media screen and (max-width:650px) {
-    .naam{
-        font-size: 1.40em;
+@media screen and (max-width:680px) {
+    .logo{
+        width: 35%;
+        height: 80%;
     }
-    .image_cont{
-        width: 27%;
+    .leftnav{
+        width: 35%;
     }
-    .naam_cont{
-        width: 73%;
+    .Header h1{
+        font-size: 1.7em;
     }
 }
-@media screen and (max-width:480px) {
-    .naam{
-        font-size: 1.10em;
+@media screen and (max-width:550px) {
+    .leftnav{
+        width: 45%;
     }
-    .naam_cont{
-        width: 75%;
+}
+@media screen and (max-width:400px) {
+    .logo{
+        width: 35%;
+        height: 80%;
     }
-    .image_cont{
-        width: 25%;
+    .Header h1{
+        margin-left: 3%;
+        font-size: 1.4em;
+    }
+    .leftnav{
+        width: 58%;
     }
 }
