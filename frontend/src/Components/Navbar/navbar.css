@@ -13,8 +13,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: 2;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 }
 /* .Navbar::before{
     content: "";

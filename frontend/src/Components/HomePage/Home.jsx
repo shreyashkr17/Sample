@@ -15,7 +15,6 @@ const Home = () => {
             <div className="search_box">
                 <h2>GET REMEDIES</h2>  
             </div>
-            
         </div>
     </div>
   )
