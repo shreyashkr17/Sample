@@ -12,7 +12,7 @@
     overflow: hidden;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    z-index: 2;
+    z-index: 100;
     backdrop-filter: blur(8px);
 }
 /* .Navbar::before{

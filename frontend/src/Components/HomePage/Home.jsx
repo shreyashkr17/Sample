@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from '../Navbar/navbar';
+import About from '../About/About';
 import "./home.css";
 
 const Home = () => {
   return (
     <div>
-        <Navbar className="navAtHome"/>
+        <Navbar/>
         <div className="homepage">
             <div className="container_upper">
                 <div className="tag">
@@ -16,6 +17,7 @@ const Home = () => {
                 <h2>GET REMEDIES</h2>  
             </div>
         </div>
+        <About/>
     </div>
   )
 }
