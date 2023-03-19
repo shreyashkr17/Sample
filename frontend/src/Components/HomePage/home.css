@@ -18,13 +18,11 @@
     background: url("../../Assets/home3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* clip-path: polygon(0 0, 100% 0%, 100% 68%, 0 90%); */
     clip-path: polygon(0 0, 0 100%, 500% 0%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    /* overflow: hidden; */
 }
 .container_upper::before{
     content: "";
@@ -40,7 +38,6 @@
     height: 30%;
     position: relative;
     background-color: transparent;
-    /* top: -10%; */
     display: flex;
     flex-direction: wrap;
     justify-content: center;
@@ -57,10 +54,6 @@
     position: absolute;
     width: 40%;
     height: 12%;
-    /* background: rgb(89,193,232); */
-    /* background: linear-gradient(0deg, rgba(89,193,232,1) 0%, rgba(53,133,218,1) 100%); */
-    /* background-color:#c97d3a ; */
-    /* background: rgb(201,125,58); */
     background: linear-gradient(to bottom, rgba(201,125,58,1) 0%, rgba(218,83,53,1) 100%);
     top: 66%;
     left: 30%;
@@ -75,4 +68,73 @@
     font-family: 'Eczar', serif;
     font-size: 2em;
     color: white;
+}
+
+
+
+
+/* Responsiveness from 1300px to  */
+@media screen and (max-width:1300px) {
+    .tag h2{
+        font-size: 280%;
+    }
+    .search_box{
+        font-size: 170%;
+    }
+}
+@media screen and (max-width:1010px) {
+    .tag h2{
+        font-size: 230%;
+        /* word-wrap:break-word; */
+    }
+    .search_box{
+        font-size: 150%;
+    }
+}
+@media screen and (max-width:850px) {
+    .tag h2{
+        font-size: 190%;
+    }
+    .search_box{
+        font-size: 130%;
+    }
+}
+@media screen and (max-width:700px) {
+    .tag h2{
+        font-size: 160%;
+    }
+    .search_box{
+        font-size: 110%;
+    }
+}
+@media screen and (max-width:600px) {
+    .tag{
+        width: 70%;
+        height: 40%;
+    }
+    .tag h2{
+        font-size: 2.3em;
+    }
+    .search_box{
+        font-size: 90%;
+    }
+}
+@media screen and (max-width:450px) {
+    .tag{
+        
+        width: 100%;
+        height: 30%;
+    }
+    .tag h2{
+        margin: 6%;
+        font-size: 1.9em;
+    }
+    .search_box{
+        font-size: 70%;
+    }
+}
+@media screen and (max-width:350px) {
+    .search_box{
+        font-size: 50%;
+    }
 }
