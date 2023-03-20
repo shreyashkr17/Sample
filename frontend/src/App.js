@@ -5,6 +5,7 @@ import Search from './Components/Search/Search';
 import Home from './Components/HomePage/Home';
 import Login from './Components/User/Login';
 import Register from './Components/User/Register';
+import Explore from './Components/Explore/explore';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/explore" element={<Explore/>} />
       </Routes>
     </Router>
   );
