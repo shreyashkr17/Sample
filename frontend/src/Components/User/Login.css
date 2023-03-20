@@ -1,6 +1,10 @@
 .login {
     height: 100vh;
-    background: linear-gradient(to right, #f3fec4, #e0fcd3);
+    /* background: linear-gradient(to right, #f3fec4, #e0fcd3); */
+    background: url("../../Assets/home3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.5; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,8 +12,21 @@
     box-sizing: border-box;
 }
 
+
+.login::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 29, 19, 0.328);
+}
+
 .loginForm {
-    background-color: white;
+    /* background-color: white; */
+    background: transparent;
+    backdrop-filter: blur(10px);
     height: 100%;
     width: 50%;
     border-radius: 30px;
@@ -18,6 +35,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    z-index: 5;
 }
 
 .loginForm>input {
