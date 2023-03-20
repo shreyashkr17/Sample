@@ -68,3 +68,32 @@
     justify-content: center;
     align-content: center;
 }
+
+
+
+
+/* Responsiveness from 650px to */
+@media screen and (max-width:650px) {
+    .bloggif{
+        width: 90%;
+        height: 70%;
+        margin: auto;
+    }
+}
+@media screen and (max-width:550px) {
+    .exp_poster{
+        height: 65%;
+    }
+    .glass_card{
+        height:70%;
+    }
+}
+@media screen and (max-width:350px) {
+    .explore_page{
+        height: 60vh;
+    }
+    .exp_poster{
+        height: 60%;
+        margin-top: 10%;
+    }
+}
