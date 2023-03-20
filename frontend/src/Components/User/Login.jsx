@@ -40,8 +40,8 @@ function Login() {
   return (
     <div className="login">
       <form className="loginForm" onSubmit={loginHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          VedicHeal
+        <Typography className="login_header" variant="h3">
+          <h1>VedicHeal</h1>
         </Typography>
         <input
           type="email"
