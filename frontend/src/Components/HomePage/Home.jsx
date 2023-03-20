@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar/navbar';
 import About from '../About/About';
+import Footer from "../Footer/Footer"
 import "./home.css";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             </div>
         </div>
         <About/>
+        <Footer/>
     </div>
   )
 }
