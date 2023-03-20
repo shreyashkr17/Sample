@@ -19,10 +19,11 @@ exports.createDisease = catchAsyncErrors(async (req, res, next) => {
 exports.getDiseases = catchAsyncErrors(async (req, res, next) => {
     const apiFeature = new ApiFeatures(Disease.find(), req.query).search();
     const diseases = await apiFeature.query;
+    const disease = diseases[0];
 
     res.status(200).json({
       success: true,
-      diseases,
+      disease,
     });
 });
 
