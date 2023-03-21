@@ -5,8 +5,13 @@ import "./navbar.css"
 import logo from "../../Assets/ayurLogo.png"
 
 import MenuIcon from '@mui/icons-material/Menu';
+import { useSelector } from 'react-redux';
+import ProfileImage from '../User/ProfileImage';
 
 const Navbar = () => {
+
+  const {isAuthenticated} = useSelector((state) => state.user);
+
   return (
     <div className='Navbar'>
         <div className="leftnav">
@@ -30,9 +35,11 @@ const Navbar = () => {
               </div>
         </div>
         <div className="rightnav">
-          <div className="btn_cont">
+          {isAuthenticated ? (<ProfileImage/>) : (
+            <div className="btn_cont">
             <button className='btn'>JOIN NOW</button>
           </div>
+          )}
         </div>
         <div className="hamburger">
           <div className="menucont">
