@@ -1,0 +1,8 @@
+.Map{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 90vh;
+    width: 100%;
+    background-color: black;
+}

@@ -13,7 +13,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: 100;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 /* .Navbar::before{
     content: "";
@@ -53,9 +53,13 @@
     align-content: center;
 }
 .Header h1{
-    color: white;
+    /* color: #ff5934; */
+    color: rgba(218,83,53,1);
+    /* -webkit-text-stroke-width: 0.01px;
+    -webkit-text-stroke-color: rgba(13, 135, 0, 0.862); */
+    /* font-weight: 400; */
     font-family: 'Yeseva One', cursive;
-    font-size: 2.5em;
+    font-size: 2.7em;
     letter-spacing: 2px;
 }
 
@@ -88,12 +92,13 @@
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
-    color: white;
+    color: #ff5934;
     opacity: 0.7;
     cursor: pointer;
 }
 .firstmid h2:hover{
     opacity: 1;
+    text-decoration: double underline;
 }
 .secondmid{
     width: 20%;
@@ -107,12 +112,13 @@
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;    
     font-size: 1.3em;
-    color: white;
+    color: #ff5934;
     opacity: 0.7;
     cursor: pointer;
 }
 .secondmid h2:hover{
     opacity: 1;
+    text-decoration: double underline;
 }
 .thirdmid{
     width: 20%;
@@ -126,12 +132,13 @@
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
-    color: white;
+    color: #ff5934;
     opacity: 0.7;
     cursor: pointer;
 }
 .thirdmid h2:hover{
     opacity: 1;
+    text-decoration: double underline;
 }
 .fourthmid{
     width: 20%;
@@ -145,12 +152,13 @@
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
-    color: white;
+    color: #ff5934;
     opacity: 0.7;
     cursor: pointer;
 }
 .fourthmid h2:hover{
     opacity: 1;
+    text-decoration: double underline;
 }
 
 
