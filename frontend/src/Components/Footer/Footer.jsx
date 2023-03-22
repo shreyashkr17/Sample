@@ -9,15 +9,15 @@ const Footer = () => {
   return (
     <div className='Footer'>
         <footer>
-            <div class="footer">
-                <div class="row row-icon">
+            <div className="footer">
+                <div className="row row-icon">
                     <a href="#"><FacebookIcon fontSize='large'/></a>
                     <a href="#"><InstagramIcon fontSize='large'/></a>
                     <a href="#"><YouTubeIcon fontSize='large'/></a>
                     <a href="#"><TwitterIcon fontSize='large'/></a>
                 </div>
 
-                <div class="row">
+                <div className="row">
                     <ul>
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">Our Services</a></li>
@@ -27,7 +27,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div class="row">
+                <div className="row">
                     VEDICHEAL Copyright © 2023 CureCrafter - All rights reserved || Designed By: CureCrafter 
                 </div>
             </div>

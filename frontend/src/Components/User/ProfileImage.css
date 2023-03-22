@@ -1,0 +1,8 @@
+.imageContainer > img {
+    position: absolute;
+    width: 5vmax;
+    height: 5vmax;
+    top: 10%;
+    right: 20%;
+    border-radius: 100%;
+  }

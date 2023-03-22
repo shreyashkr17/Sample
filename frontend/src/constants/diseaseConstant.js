@@ -1,0 +1,4 @@
+export const DISEASE_REQUEST = "DISEASE_REQUEST";
+export const DISEASE_SUCCESS = "DISEASE_SUCCESS";
+export const DISEASE_FAIL = "DISEASE_FAIL";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";

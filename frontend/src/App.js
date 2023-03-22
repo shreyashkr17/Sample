@@ -5,6 +5,7 @@ import Search from './Components/Search/Search';
 import Home from './Components/HomePage/Home';
 import Login from './Components/User/Login';
 import Register from './Components/User/Register';
+import Profile from './Components/User/Profile';
 import Explore from './Components/Explore/explore';
 import Map from "./Components/Map/Map"
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/explore" element={<Explore/>} />
         <Route path="/map" element={<Map/>} />
       </Routes>
