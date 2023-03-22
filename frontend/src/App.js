@@ -8,6 +8,7 @@ import Register from './Components/User/Register';
 import Profile from './Components/User/Profile';
 import Explore from './Components/Explore/explore';
 import Map from "./Components/Map/Map"
+import Blog from "./Components/Blogs/blogcards"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/explore" element={<Explore/>} />
         <Route path="/map" element={<Map/>} />
+        <Route path="/blogs" element={<Blog/>} />
       </Routes>
     </Router>
   );

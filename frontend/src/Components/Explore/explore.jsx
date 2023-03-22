@@ -16,18 +16,24 @@ const Explore = () => {
             <div className="exp_poster">
                 <div className="card1">
                     <div className="glass_card">
+                        <Link to="#">
                         <img src={Blog} alt="" className='bloggif' />
+                        </Link>
                     </div>
                 </div>
                 <div className="card2">
                     <div className="glass_card">
-                        <img src={videoPlayer} alt="" className='bloggif' />
+                        <Link to="#">
+                            <img src={videoPlayer} alt="" className='bloggif' />
+                        </Link>
                     </div>
                 </div>
                 
                 <div className="card3">
                     <div className="glass_card">
-                        <img src={Map} alt="" className='bloggif' />
+                        <Link to={"/map"}>
+                            <img src={Map} alt="" className='bloggif' />
+                        </Link>
                     </div>
                 </div>
                 
