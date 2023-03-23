@@ -8,6 +8,7 @@ import Register from './Components/User/Register';
 import Profile from './Components/User/Profile';
 import Explore from './Components/Explore/explore';
 import Map from "./Components/Map/Map"
+import UpdateProfile from './Components/User/UpdateProfile';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/update" element={<UpdateProfile/>} />
         <Route path="/explore" element={<Explore/>} />
         <Route path="/map" element={<Map/>} />
       </Routes>

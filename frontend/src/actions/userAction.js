@@ -1,3 +1,4 @@
+import { async } from "@firebase/util";
 import {
   createUserWithEmailAndPassword,
   FacebookAuthProvider,
@@ -8,7 +9,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import { addDoc, collection, doc, getDocs, setDoc, updateDoc } from "firebase/firestore";
 import {
   CLEAR_ERRORS,
   FACEBOOK_AUTH_FAIL,
@@ -31,6 +32,9 @@ import {
   REGISTER_USER_FAIL,
   REGISTER_USER_REQUEST,
   REGISTER_USER_SUCCESS,
+  UPDATE_PROFILE_FAIL,
+  UPDATE_PROFILE_REQUEST,
+  UPDATE_PROFILE_SUCCESS,
 } from "../constants/userConstant";
 import {
   auth,
@@ -45,11 +49,19 @@ export const loginUser = (email, password) => async (dispatch) => {
     dispatch({ type: LOGIN_REQUEST });
     await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user);
+        const users = userCredential.user;
+        (async () => {
+          const userRef = await getDocs(collection(db, "users"));
+          const docs = userRef.docs.find((doc) => doc.id === users.uid);
+          if (docs) {
+            const userData = docs;
+            console.log(userData);
+          }
+        })();
+
         dispatch({
           type: LOGIN_SUCCESS,
-          payload: user,
+          payload: users,
         });
       })
       .catch((error) => {
@@ -85,27 +97,33 @@ export const registerUser = (name, email, password) => async (dispatch) => {
         })();
         setTimeout(async () => {
         }, 5000);
-        dispatch({
-          type: REGISTER_USER_SUCCESS,
-          payload: user,
-        });
         data = user;
       }
     );
     
     if (data) {
         const userRef = await getDocs(collection(db, "users"));
-        const doc = userRef.docs.find((doc) => doc.id === data.uid);
-        if (!doc) {
+        const docs = userRef.docs.find((doc) => doc.id === data.uid);
+        if (!docs) {
           const user = {
             uid: data.uid,
             email: data.email,
             name: name,
             createdAt: new Date(),
-            age: null,
+            age: "",
+            gender: "",
+            city: "",
+            state: "",
+            country: "",
+            dob: "",
+            mobile:"",
             avatar: data.photoURL,
           };
-          await addDoc(collection(db, "users"), user);
+          await setDoc(doc(db, "users", data.uid), user);
+          dispatch({
+            type: REGISTER_USER_SUCCESS,
+            payload: user,
+          });
         } else {
           // handle case where user already exists in collection
           return null;
@@ -131,27 +149,35 @@ export const authWithGoogle = () => async (dispatch) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       const user = result.user;
-      dispatch({
-        type: GOOGLE_AUTH_SUCCESS,
-        payload: user,
-      });
+      
       data = user;
     });
 
         
     if (data) {
         const userRef = await getDocs(collection(db, "users"));
-        const doc = userRef.docs.find((doc) => doc.id === data.uid);
-        if (!doc) {
+        const docs = userRef.docs.find((doc) => doc.id === data.uid);
+        if (!docs) {
+          //set the doc id equal to data.uid
           const user = {
             uid: data.uid,
             email: data.email,
             name: data.displayName,
             createdAt: new Date(),
-            age: null,
+            age: "",
+            gender: "",
+            city: "",
+            state: "",
+            country: "",
+            dob: "",
+            mobile:"",
             avatar: data.photoURL,
           };
-          await addDoc(collection(db, "users"), user);
+          await setDoc(doc(db, "users", data.uid), user);
+          dispatch({
+            type: GOOGLE_AUTH_SUCCESS,
+            payload: user,
+          });
         } else {
           // handle case where user already exists in collection
           return null;
@@ -176,28 +202,34 @@ export const authWithFacebook = () => async (dispatch) => {
       const user = result.user;
       const credential = FacebookAuthProvider.credentialFromResult(result);
       const accessToken = credential.accessToken;
-      dispatch({
-        type: FACEBOOK_AUTH_SUCCESS,
-        payload: user.toJSON(),
-      });
 
       data = user.toJSON();
     });
 
     if (data) {
         const userRef = await getDocs(collection(db, "users"));
-        const doc = userRef.docs.find((doc) => doc.id === data.uid);
+        const docs = userRef.docs.find((doc) => doc.id === data.uid);
         console.log(doc);
-        if (!doc) {
+        if (!docs) {
           const user = {
             uid: data.uid,
             email: data.email,
             name: data.displayName,
             createdAt: new Date(),
-            age: null,
+            age: "",
+            gender: "",
+            city: "",
+            state: "",
+            country: "",
+            dob: "",
+            mobile:"",
             avatar: data.photoURL,
           };
-          await addDoc(collection(db, "users"), user);
+          await setDoc(doc(db, "users", data.uid), user);
+          dispatch({
+            type: FACEBOOK_AUTH_SUCCESS,
+            payload: user.toJSON(),
+          });
         } else {
           // handle case where user already exists in collection
           return null;
@@ -235,12 +267,28 @@ export const authWithGitHub = () => async (dispatch) => {
   }
 };
 
-export const loadUser = () => async (dispatch) => {
+export const loadUser = (user_uid) => async (dispatch) => {
   try {
     dispatch({ type: LOAD_USER_REQUEST });
-    const data = auth.currentUser;
+    // const data = auth.currentUser;
+    //access the current user from database
+    const userRef = await getDocs(collection(db, "users"));
+    const docs = userRef.docs.find((doc) => doc.id === user_uid);
+    if (docs) {
+      // console.log(data.name);
+      console.log(docs.data());
+      dispatch({
+        type: LOAD_USER_SUCCESS,
+        payload: docs.data(),
+      });
+    } else {
+      dispatch({
+        type: LOAD_USER_FAIL,
+        payload: "User not found",
+      });
+    }
 
-    dispatch({ type: LOAD_USER_SUCCESS, payload: data });
+    // dispatch({ type: LOAD_USER_SUCCESS, payload: data });
   } catch (error) {
     dispatch({type: LOAD_USER_FAIL, payload: error});
     console.log(error);
@@ -261,6 +309,31 @@ export const logoutUser = () => async (dispatch) => {
       type: LOGOUT_FAIL,
       payload: errorMessage,
     });
+  }
+};
+
+export const updateProfileData = (user, user_id) => async (dispatch) => {
+  try {
+    dispatch({ type: UPDATE_PROFILE_REQUEST });
+    
+    // const curr = auth.currentUser;
+    await updateDoc(doc(db, "users", user_id), user);
+    // console.log(curr);
+    //check if data is updated
+    const userRef = await getDocs(collection(db, "users"));
+    const docs = userRef.docs.find((doc) => doc.id === user_id);
+    if (docs) {
+      // await updateProfile(auth.currentUser, {
+      //   displayName: user.name, photoURL: user.avatar, email: user.email
+      // });
+      dispatch({ type: UPDATE_PROFILE_SUCCESS, payload: docs.data() });
+    } else {
+      dispatch({ type: UPDATE_PROFILE_FAIL, payload: "Error updating profile" });
+    }
+    // dispatch({ type: UPDATE_PROFILE_SUCCESS, payload: data.success });
+  } catch (error) {
+    dispatch({ type: UPDATE_PROFILE_FAIL, payload: error });
+    console.log(error);
   }
 };
 

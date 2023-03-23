@@ -3,14 +3,13 @@ import Navbar from '../Navbar/navbar';
 import About from '../About/About';
 import Footer from "../Footer/Footer"
 import "./home.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
 const Home = () => {
 
     const [path, setPath] = useState("/register");
-
 
     // const handleRedirection = (e) => {
     //     e.preventDefault();

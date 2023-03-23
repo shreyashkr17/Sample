@@ -11,6 +11,7 @@ import ProfileImage from '../User/ProfileImage';
 const Navbar = () => {
 
   const {isAuthenticated} = useSelector((state) => state.user);
+  console.log(isAuthenticated);
 
   return (
     <div className='Navbar'>

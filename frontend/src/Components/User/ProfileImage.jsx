@@ -14,7 +14,7 @@ function ProfileImage() {
 
   return (
     <div className='imageContainer' onClick={goToProfile}>
-        <img src={user.photoURL} alt={user.displayName} />
+        <img src={user.avatar} alt={user.displayName} />
     </div>
   )
 }
