@@ -23,7 +23,8 @@ function App() {
         <Route path="/profile/update" element={<UpdateProfile/>} />
         <Route path="/explore" element={<Explore/>} />
         <Route path="/map" element={<Map/>} />
-        <Route path="/blogs" element={<Blog/>} />
+        {/* <Route path="#blogs" element={<Blog/>} /> */}
+        {/* <Route path="/blogs" element={<Blog/>} /> */}
       </Routes>
     </Router>
   );
