@@ -8,6 +8,8 @@ import Blog from "../../Assets/Blog.gif"
 import videoPlayer from "../../Assets/videoPlayer.gif"
 import Map from "../../Assets/map.gif"
 
+import Blogcards from '../Blogs/blogcards';
+
 const Explore = () => {
   return (
     <div className='Explore'>
@@ -16,9 +18,9 @@ const Explore = () => {
             <div className="exp_poster">
                 <div className="card1">
                     <div className="glass_card">
-                        <Link to="#">
-                        <img src={Blog} alt="" className='bloggif' />
-                        </Link>
+                        <a href="#blogs">
+                            <img src={Blog} alt="" className='bloggif' />
+                        </a>
                     </div>
                 </div>
                 <div className="card2">
@@ -36,10 +38,9 @@ const Explore = () => {
                         </Link>
                     </div>
                 </div>
-                
             </div>
         </div>
-        
+        <Blogcards/>
     </div>
   )
 }
