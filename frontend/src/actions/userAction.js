@@ -125,8 +125,10 @@ export const registerUser = (name, email, password) => async (dispatch) => {
             payload: user,
           });
         } else {
-          // handle case where user already exists in collection
-          return null;
+          dispatch({
+            type: REGISTER_USER_SUCCESS,
+            payload: docs.data(),
+          });
         }
     } else {
         console.log("No user found");
@@ -153,10 +155,11 @@ export const authWithGoogle = () => async (dispatch) => {
       data = user;
     });
 
-        
+    
     if (data) {
-        const userRef = await getDocs(collection(db, "users"));
-        const docs = userRef.docs.find((doc) => doc.id === data.uid);
+      const userRef = await getDocs(collection(db, "users"));
+      const docs = userRef.docs.find((doc) => doc.id === data.uid);
+      // console.log(userRef.data());
         if (!docs) {
           //set the doc id equal to data.uid
           const user = {
@@ -179,8 +182,11 @@ export const authWithGoogle = () => async (dispatch) => {
             payload: user,
           });
         } else {
-          // handle case where user already exists in collection
-          return null;
+          console.log(docs.data());
+          dispatch({
+            type: GOOGLE_AUTH_SUCCESS,
+            payload: docs.data(),
+          });
         }
     } else {
         console.log("No user found");
@@ -231,8 +237,10 @@ export const authWithFacebook = () => async (dispatch) => {
             payload: user.toJSON(),
           });
         } else {
-          // handle case where user already exists in collection
-          return null;
+          dispatch({
+            type: FACEBOOK_AUTH_SUCCESS,
+            payload: docs.data(),
+          });
         }
     } else {
         console.log("No user found");
