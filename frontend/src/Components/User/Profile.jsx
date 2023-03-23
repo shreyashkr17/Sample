@@ -21,8 +21,6 @@ function Profile() {
       navigate("/login");
     }
 
-    console.log(auth.currentUser);
-
     useEffect(()=>{
       if(!user){
         navigate("/login");
@@ -55,10 +53,10 @@ function Profile() {
                         <h4>Email</h4>
                         <p>{user.email}</p>
                     </div>
-                    <div>
+                    {user.mobile && (<div>
                         <h4>Mobile No.</h4>
                         <p>{user.mobile}</p>
-                    </div>
+                    </div>)}
                     <div>
                         <h4>Joined On</h4>
                         <p>{String(user.createdAt).substring(0, 10)}</p>
