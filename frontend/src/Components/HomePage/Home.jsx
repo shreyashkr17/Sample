@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar/navbar';
 import About from '../About/About';
 import Footer from "../Footer/Footer"
@@ -6,27 +6,23 @@ import "./home.css";
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
 
     const [path, setPath] = useState("/register");
+    const {user} = useSelector((state) => state.user);
 
-    // const handleRedirection = (e) => {
-    //     e.preventDefault();
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-              // User is signed in, see docs for a list of available properties
-              // https://firebase.google.com/docs/reference/js/firebase.User
-              const uid = user.uid;
-                setPath("/search");
-              // ...
-            } else {
-              // User is signed out
-              setPath("/register");
-              // ...
-            }
-        });    
-    // }
+
+    useEffect(() => {
+      if(user){
+        setPath("/search");
+      }
+      else{
+        setPath("/register");
+      }
+    }, [user, setPath])
+    
 
   return (
     <div>
