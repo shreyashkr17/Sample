@@ -9,6 +9,7 @@ import Profile from './Components/User/Profile';
 import Explore from './Components/Explore/explore';
 import Map from "./Components/Map/Map"
 import UpdateProfile from './Components/User/UpdateProfile';
+import Blog from "./Components/Blogs/blogcards"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/profile/update" element={<UpdateProfile/>} />
         <Route path="/explore" element={<Explore/>} />
         <Route path="/map" element={<Map/>} />
+        <Route path="/blogs" element={<Blog/>} />
       </Routes>
     </Router>
   );
