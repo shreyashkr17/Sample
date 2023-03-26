@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Edu+NSW+ACT+Foundation&family=Nunito:ital,wght@1,800&display=swap');
+
+.disease-detail {
+    position: absolute;
+  background: radial-gradient(
+    circle,
+    #e4ffa1e4 0%, 
+    #f0ffcb 50%, 
+    #d3f77998 100%);
+}
+
+.Dname {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 6rem;
+  margin-left: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.Dname::first-letter{
+    text-transform: uppercase;
+}
+
+.discription{
+    margin: auto;
+    max-width: 90%;
+}
+
+.intro{
+    font-family: 'Alkatra', cursive;
+}
+
+.remedies_container{
+    max-width: 80%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 
+    0 0 0 1px rgba(0, 0, 0, 0.065),
+    0 4px 6px 1px rgba(0, 0, 0, 0.207),
+    0 2px 4px 1px rgba(0, 0, 0, 0.14);
+    margin: 2rem 2rem 2rem 3rem;
+    padding: 1.2rem;
+}
+
+.material {
+  margin-bottom: 0.4rem;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: underline;
+}
+
+.Rem_heading{
+    font-family: 'Alkatra', cursive;
+}
+
+.dirOfUse>p .precautionSec>ul{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.Rem_heading>p{
+    padding-left: 0.5rem;
+}
+
+.precautionSec>ul{
+    padding-left: 1rem;
+}

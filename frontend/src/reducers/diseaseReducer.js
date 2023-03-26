@@ -5,10 +5,10 @@ import {
   CLEAR_ERRORS,
 } from "../constants/diseaseConstant";
 
-export const diseaseReducer = (state = { diseases: [] }, action) => {
+export const diseaseReducer = (state = { }, action) => {
   switch (action.type) {
     case DISEASE_REQUEST:
-      return { loading: true, disease: [] };
+      return { loading: true, disease: {} };
     case DISEASE_SUCCESS:
       return { loading: false, disease: action.payload };
     case DISEASE_FAIL:

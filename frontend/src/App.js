@@ -10,6 +10,7 @@ import Explore from './Components/Explore/explore';
 import Map from "./Components/Map/Map"
 import UpdateProfile from './Components/User/UpdateProfile';
 import Blog from "./Components/Blogs/blogcards"
+import DiseaseDetail from './Components/DiseaseDetail/DiseaseDetail';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/search" element={<Search />} />
+        <Route path="/disease/:id" element={<DiseaseDetail />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/profile" element={<Profile />} />
