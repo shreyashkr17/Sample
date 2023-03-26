@@ -1,6 +1,6 @@
 import React,{useRef,useState,useEffect} from "react";
 import Navbar from "../Navbar/navbar";
-import "./location.js";
+// import "./location.js";
 import "./map.css";
 
 import "@tomtom-international/web-sdk-maps/dist/maps.css";
@@ -56,7 +56,16 @@ const Map = () => {
     var Amrutkalp = [72.74207849404002,21.77177991218617];
     var jeevan = [85.00533460012866,26.141600105770358];
     var Ayurbeth = [76.19285386625076,11.083845537548928];
-
+    var Rajkiya = [85.16804404386276,26.494381718741444];
+    var Nia = [75.76374741842774,27.434396560344958];
+    var Rari = [84.8461560335234,26.626290712292686];
+    var iiarh = [70.33760383352342,23.08728500270486];
+    var bhartiVidyapeeth = [73.9411193628957,19.2359292261226];
+    var Gac = [84.92744719634784,26.517251571581603];
+    var carih = [85.45479093235353,21.133156296573436];
+    var AiaGoa = [73.50166624955762,16.89651626037624];
+    var Nriadd = [88.34443650152625,23.58894885721546];
+    var RariNagpur = [79.29170236676171,22.171931307994125]; 
 
 
 
@@ -69,12 +78,17 @@ const Map = () => {
     var marker6 = new tt.Marker().setLngLat(Amrutkalp).addTo(map);
     var marker7 = new tt.Marker().setLngLat(jeevan).addTo(map);
     var marker8 = new tt.Marker().setLngLat(Ayurbeth).addTo(map);
-    // var marker9 = new tt.Marker().setLngLat().addTo(map);
-    // var marker10 = new tt.Marker().setLngLat().addTo(map);
-    // var marker11 = new tt.Marker().setLngLat().addTo(map);
-    // var marker12 = new tt.Marker().setLngLat().addTo(map);
-    // var marker13 = new tt.Marker().setLngLat().addTo(map);
-    // var marker14 = new tt.Marker().setLngLat().addTo(map);
+    var marker9 = new tt.Marker().setLngLat(Rajkiya).addTo(map);
+    var marker10 = new tt.Marker().setLngLat(Nia).addTo(map);
+    var marker11 = new tt.Marker().setLngLat(Rari).addTo(map);
+    var marker12 = new tt.Marker().setLngLat(iiarh).addTo(map);
+    var marker13 = new tt.Marker().setLngLat(bhartiVidyapeeth).addTo(map);
+    var marker14 = new tt.Marker().setLngLat(Gac).addTo(map);
+    var marker15 = new tt.Marker().setLngLat(carih).addTo(map);
+    var marker16 = new tt.Marker().setLngLat(AiaGoa).addTo(map);
+    var marker17 = new tt.Marker().setLngLat(Nriadd).addTo(map);
+    var marker18 = new tt.Marker().setLngLat(RariNagpur).addTo(map);
+    
 
     var popupOffsets = {
       top: [0, 0],
@@ -110,6 +124,36 @@ const Map = () => {
     var popup8 = new tt.Popup({ offset: popupOffsets }).setHTML(
       "<div><p>Ayur Bethaniya Ayurveda Hospital</p><p>Athani - Thiruthiparambu Rd, Peringandoor, Kerala 680581</p></div>"
     );
+    var popup9 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>Rajkiya Ayurvedic College & Hospital</p><p>Budhha Murti, Justice Rajkishore Path, West Lohanipur, Ghrounda, Patna, Bihar 800003</p></div>"
+    );
+    var popup10 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>National Institute Of Ayurveda</p><pMadhav Vilas Palace, Amer Rd, Jaipur, Rajasthan 302002</p></div>"
+    );
+    var popup11 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>Regional Ayurveda Research Institute, CCRAS, Govt. Of India</p><p>RMRIMS Campus, Agam Kuan Flyover, Agam Kuan, Sadikpur, Patna, Bihar 800007</p></div>"
+    );
+    var popup12 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>Indian Institute of Ayurveda Research and Hospital</p><p>150 Ft. Ishawariya Road, Kalawad Road, Ishvariya, Gujarat 360110</p></div>"
+    );
+    var popup13 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>College of Ayurved, Bharati Vidyapeeth Deemed University, Pune</p><p>FV43+RR7, Dhanakwadi Educational Campus, Satara Road, Pune, Maharashtra 411043</p></div>"
+    );
+    var popup14 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>Govt. Ayurvedic college</p><p>Govt. Ayurvedic college, Kadamkuan, Patna, Bihar 800003</p></div>"
+    );
+    var popup15 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>CENTRAL AYURVEDA RESEARCH INSTITUTE FOR HEPATOBILIARY DISORDERS</p><p>Bharatpur, Bhubaneswar, Odisha 751003</p></div>"
+    );
+    var popup16 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>All India Institute of Ayurveda, Goa</p><p>MRPP+QW9, Dargalim, Goa 403519</p></div>"
+    );
+    var popup17 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>National Research Institute of Ayurvedic Drug Development</p><p>HCHJ+8W8, CN Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091</p></div>"
+    );
+    var popup18 = new tt.Popup({ offset: popupOffsets }).setHTML(
+      "<div><p>RARI (Regional Ayurveda Research Institute ), Nagpur</p><p>KDK College Rd, Near Gharkul Parisar, Nandanvan, Nagpur, Maharashtra 440009</p></div>"
+    );
 
     marker1.setPopup(popup1).togglePopup();
     marker2.setPopup(popup2).togglePopup();
@@ -119,6 +163,12 @@ const Map = () => {
     marker6.setPopup(popup6).togglePopup();
     marker7.setPopup(popup7).togglePopup();
     marker8.setPopup(popup8).togglePopup();
+    marker9.setPopup(popup9).togglePopup();
+    marker10.setPopup(popup10).togglePopup();
+    marker11.setPopup(popup11).togglePopup();
+    marker12.setPopup(popup12).togglePopup();
+    marker13.setPopup(popup13).togglePopup();
+    marker14.setPopup(popup14).togglePopup();
 
     setMap(map);
     

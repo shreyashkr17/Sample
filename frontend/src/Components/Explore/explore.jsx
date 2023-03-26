@@ -18,9 +18,9 @@ const Explore = () => {
             <div className="exp_poster">
                 <div className="card1">
                     <div className="glass_card">
-                        <a href="#blogs">
+                        <Link to="/blogs">
                             <img src={Blog} alt="" className='bloggif' />
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="card2">

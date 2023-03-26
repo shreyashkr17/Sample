@@ -1,23 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
 .profileContainer {
   display: flex;
   height: 100vh;
   width: 100vw;
-  position: fixed;
+  position: relative;
   top: 0%;
   left: 0%;
   max-width: 100%;
   /* background linear gradient from sea green to yellow green*/
-  background: linear-gradient(
-    336deg,
-    rgb(162, 254, 242),
-    rgb(162, 254, 206),
-    rgb(178, 255, 168),
-    rgb(184, 255, 167),
-    rgb(205, 255, 174)
-  );
+  background-color: #ebfce3;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.profile_inner{
+  top: 5%;
+  width: 85%;
+  height: 80vh;
+  position: relative;
+  /* background-color: black; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* background: rgba( 1, 122, 1, 0.45 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 3px solid rgba(0, 110, 28, 0.751); */
 }
 
-.profileContainer > div {
+
+
+
+/* Top Profile PArt of the section */
+.top_profile{
+  width: 100%;
+  height: 15%;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+}
+.top_profile_container{
+  width: 98%;
+  height: 90%;
+  /* background-color: pink; */
+  display: flex;
+  margin: auto;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  flex-direction: column;
+}
+.top_profile h1{
+  font-family: 'Josefin Sans', sans-serif;
+  margin: auto;
+}
+
+
+
+
+/* Down Profile of The Profile Section */
+.down_profile{
+  width: 100%;
+  height: 85%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+.left_profile{
+  width: 30%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  /* margin: ; */
+}
+.left_profile_container{
+  width: 92%;
+  height: 95%;
+  background-color: gray;
+  position: relative;
+  margin: auto;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  display: flex;
+  flex-direction: column;
+}
+
+
+.right_profile{
+  width: 70%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+.right_profile_container{
+  width: 97%;
+  height: 95%;
+  background-color: cadetblue;
+  position: relative;
+  margin: auto;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  display: flex;
+  flex-direction: column;
+}
+.profile_img{
+  width: 100%;
+  height: 60%;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.userImg{
+  margin: auto;
+  width: 70%;
+}
+.profile_func_btn{
+  width: 100%;
+  height: 40%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.edit_profile{
+  margin: auto;
+}
+.edit_profile button{
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 5%;
+  width: 100%;
+  position: relative;
+  font-size: 1em;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.logOutbtn{
+  width: 32%;
+  position: relative;
+  margin: auto;
+  padding: 3%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1em;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: -2%;
+}
+
+
+.section1{
+  display: flex;
+  width: 100%;
+  height: 16.67%;
+  background-color: transparent;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.name_label{
+  width: 20%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nameLabel{
+  margin: auto;
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+}
+.nameUser{
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.headNameUser{
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  position: relative;
+  top: 33%;
+}
+
+
+.email_label{
+  width: 20%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+.email_label label{
+  margin: auto;
+  position: relative;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+}
+.emailName{
+  width: 80%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.emailUser{
+  position: relative;
+  top: 33%;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+}
+
+
+
+.Phonelabel{
+  width: 20%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.labelUser{
+  color: black;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: auto;
+}
+.numberUser{
+  width: 80%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-wrap:wrap;
+}
+.number{
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  /* margin: auto; */
+  top: 33%;
+  position: relative;
+  color: black;
+}
+
+.left_section1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: transparent;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+.Agelabel{
+  width: 41%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+}
+.ageLabelUser{
+  color: black;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: auto;
+}
+.ageUser{
+  width: 59%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.age{
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+  top: 33%;
+}
+
+.right_section1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: transparent;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+.Genderlabel{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  position:relative;
+  background-color: transparent;
+}
+.genderLabelUser{
+  color: black;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: auto;
+}
+.genderUser{
+  width: 60%;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gender{
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+  top: 33%;
+}
+.dobLabel{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: transparent;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.dobLabelUser{
+  color: black;
+  font-size: 1.4em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: auto;
+}
+.dobUser{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  background-color: transparent;
+  /* top: 33%; */
+  position: relative;
+}
+.dob{
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+  top: 33%;
+}
+.locationLabel{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  background-color: transparent;
+  position: relative;
+  flex-wrap: wrap;
+}
+.locationLabelUser{
+  color: black;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: auto;
+}
+.locationUser{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  background-color: transparent;
+  flex-direction: row;
+  position: relative;
+}
+.location{
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+  top: 33%;
+}
+
+
+
+/* .profileContainer > div {
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -135,4 +527,4 @@
     padding: 1vmax;
     margin: 2vmax 0;
   }
-}
+} */
