@@ -24,7 +24,7 @@ function Profile() {
     }
 
     useEffect(()=>{
-      if(user && user.avatar === null){
+      if(user.avatar === ""){
         user.avatar = DefaultImg;
       }
     },[navigate, user])
