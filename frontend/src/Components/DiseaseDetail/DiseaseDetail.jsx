@@ -6,7 +6,11 @@ import Navbar from "../Navbar/navbar";
 import "./DiseaseDetail.css";
 
 function DiseaseDetail() {
-  const { loading, disease } = useSelector((state) => state.diseases);
+  const { error, loading, disease } = useSelector((state) => state.diseases);
+  if(error){
+    alert.info("No such Disease Found");
+    console.log(error);
+  }
 
   return (
     <>

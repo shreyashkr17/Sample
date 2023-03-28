@@ -10,7 +10,8 @@ import { logoutUser } from '../../actions/userAction'
 import Navbar from '../Navbar/navbar'
 import { collection, getDocs } from 'firebase/firestore'
 import { auth, db } from '../../firebase'
-import userMale from "../../Assets/userMale.png"
+// import userMale from "../../Assets/userMale.png"
+import DefaultImg from "../../Assets/yogaHerbs.png"
 
 function Profile() {
     const navigate = useNavigate();
@@ -23,14 +24,10 @@ function Profile() {
     }
 
     useEffect(()=>{
-      if(!user){
-        navigate("/login");
+      if(user && user.avatar === null){
+        user.avatar = DefaultImg;
       }
-        if(isAuthenticated === false || user === null){
-          dispatch(logoutUser());
-            navigate("/login");
-        }
-    },[isAuthenticated, navigate, dispatch, user])
+    },[navigate, user])
 
   return (
     <>
@@ -129,13 +126,17 @@ function Profile() {
                           )}
                         </div>
                         <div className="section1">
-                            {user.country && user.state && user.city || (
+                            {(user.country || user.state || user.city) && (
                               <>
                                 <div className="locationLabel">
                                   <label className="locationLabelUser">Location :</label>
                                 </div>
                                 <div className="locationUser">
-                                  <h5 className="location">{user.city},{user.state},{user.country}</h5>
+                                  <h5 className="location">
+                                    {user.city && user.city + ", "}
+                                    {user.state && user.state + ", "}
+                                    {user.country && user.country}
+                                  </h5>
                                 </div>
                               </>
                             )}

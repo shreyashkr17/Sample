@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 .Navbar{
     display: flex;
     flex-direction: row;
@@ -39,8 +39,8 @@
     align-content: center;
 }
 .logo{
-    width: 30%;
-    height: 90%;
+    width: 4rem;
+    height: 4rem;
     margin: auto;
 }
 .Header{
@@ -80,8 +80,10 @@
     flex-wrap: wrap;
     margin-left: 8%;
     justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
 }
-.firstmid{
+/* .firstmid{
     width: 20%;
     background-color: transparent;
     display: flex;
@@ -90,17 +92,13 @@
     align-content: center;
 }
 .firstmid h2{
-    font-family: 'Paytone One', sans-serif;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 1.3em;
-    color: #ff5934;
+    color: #eb5b1d;
     opacity: 0.7;
     cursor: pointer;
 }
-.firstmid h2:hover{
-    opacity: 1;
-    text-decoration: double underline;
-}
+
 .secondmid{
     width: 20%;
     background-color: transparent;
@@ -110,17 +108,13 @@
     align-content: center;
 }
 .secondmid h2{
-    font-family: 'Paytone One', sans-serif;
-    font-weight: 300;    
+    font-weight: bold;    
     font-size: 1.3em;
-    color: #ff5934;
+    color: #eb5b1d;
     opacity: 0.7;
     cursor: pointer;
 }
-.secondmid h2:hover{
-    opacity: 1;
-    text-decoration: double underline;
-}
+
 .thirdmid{
     width: 20%;
     background-color: transparent;
@@ -130,17 +124,13 @@
     align-content: center;
 }
 .thirdmid h2{
-    font-family: 'Paytone One', sans-serif;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 1.3em;
-    color: #ff5934;
+    color: #eb5b1d;
     opacity: 0.7;
     cursor: pointer;
 }
-.thirdmid h2:hover{
-    opacity: 1;
-    text-decoration: double underline;
-}
+
 .fourthmid{
     width: 20%;
     background-color: transparent;
@@ -150,18 +140,26 @@
     align-content: center;
 }
 .fourthmid h2{
-    font-family: 'Paytone One', sans-serif;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 1.3em;
-    color: #ff5934;
+    color: #eb5b1d;
     opacity: 0.7;
     cursor: pointer;
-}
-.fourthmid h2:hover{
-    opacity: 1;
-    text-decoration: double underline;
+} */
+.navli{
+    font-family: 'Alkatra', cursive !important;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #eb5b1d;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
+.navli:hover{
+    opacity: 1;
+    scale: 1.1;
+}
 
 
 
@@ -228,9 +226,8 @@
 /* Responsive from 1000px to 850 px */
 @media screen and (max-width:1000px) {
     .logo{
-        width: 35%;
-        height: 85%;
-        margin: auto;
+        width: 3.5rem;
+        height: 3.5rem;
     }
     .firstmid h2{
         font-size: 1em;
@@ -263,11 +260,8 @@
         width: 30%;
     }
     .logo{
-        width: 35%;
-        height: 85%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
+        width: 3rem;
+        height: 3rem;
     }
     .hamburger{
         width: 20%;
@@ -293,8 +287,8 @@
 }
 @media screen and (max-width:680px) {
     .logo{
-        width: 35%;
-        height: 80%;
+        width: 3rem;
+        height: 3rem;
     }
     .leftnav{
         width: 35%;
@@ -310,8 +304,8 @@
 }
 @media screen and (max-width:400px) {
     .logo{
-        width: 35%;
-        height: 80%;
+        width: 3rem;
+        height: 3rem;
     }
     .Header h1{
         margin-left: 3%;

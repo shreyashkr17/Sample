@@ -25,10 +25,19 @@ export const getDisease = (searchQuery) => async (dispatch) => {
     const matchingDocs = await querySnapshot.docs.map((doc) => doc.data());
     const data = await matchingDocs[0];
 
-    dispatch({
-      type: DISEASE_SUCCESS,
-      payload: data,
-    });
+    if(data){
+      dispatch({
+        type: DISEASE_SUCCESS,
+        payload: data,
+      });
+    }
+    else{
+      dispatch({
+        type: DISEASE_FAIL,
+        payload: "No disease found",
+      });
+    }
+
   } catch (error) {
     dispatch({
       type: DISEASE_FAIL,

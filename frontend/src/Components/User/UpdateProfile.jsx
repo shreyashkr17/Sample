@@ -14,6 +14,7 @@ import LocationCityOutlinedIcon from "@mui/icons-material/LocationCityOutlined";
 import HomeWorkOutlinedIcon from "@mui/icons-material/HomeWorkOutlined";
 import { Country, State } from "country-state-city";
 import { useAlert } from "react-alert";
+import DefaultImg from "../../Assets/yogaHerbs.png"
 
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -34,7 +35,7 @@ function UpdateProfile() {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState(DefaultImg);
   const [avatarPreview, setAvatarPreview] = useState("");
   const [age, setAge] = useState("");
   const [sex, setSex] = useState("");
@@ -59,7 +60,9 @@ function UpdateProfile() {
       dob: date,
       mobile: mobile,
     };
-    dispatch(updateProfileData(myForm, user.uid));
+    setTimeout(() => {
+      dispatch(updateProfileData(myForm, user.uid));
+    }, 1000);
   };
 
   const updateProfileDataChange = (e) => {
@@ -80,6 +83,7 @@ function UpdateProfile() {
       setName(user.name);
       setEmail(user.email);
       setAvatarPreview(user.avatar);
+      setAvatar(user.avatar);
       setAge(user.age);
       setSex(user.gender);
       setCountry(user.country);
@@ -94,14 +98,14 @@ function UpdateProfile() {
     }
     if (isUpdated) {
       alert.success("Profile Updated Successfully");
-      (async () => {
-        await dispatch(loadUser(user.uid));
-      })();
       navigate("/profile");
-
+      setTimeout(() => {
+        dispatch(loadUser(user.uid));
+      }, 500);
       dispatch({
         type: UPDATE_PROFILE_RESET,
       });
+
     } else {
       console.log(isUpdated);
     }

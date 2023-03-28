@@ -1,17 +1,14 @@
 import React from 'react'
 import "./navbar.css"
-
-// Image Importation
 import logo from "../../Assets/ayurLogo.png"
-
 import MenuIcon from '@mui/icons-material/Menu';
 import { useSelector } from 'react-redux';
 import ProfileImage from '../User/ProfileImage';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
   const {isAuthenticated} = useSelector((state) => state.user);
-  console.log(isAuthenticated);
 
   return (
     <div className='Navbar'>
@@ -22,23 +19,37 @@ const Navbar = () => {
             </div>
         </div>
         <div className="midnav">
-              <div className="firstmid">
-                <h2>HOME</h2>
+              <div className="firstmid navli">
+                <Link to="/" style={{ textDecoration: "none" , color: "#eb5b1d"}}>
+                  <h2>
+                    HOME
+                  </h2>
+                </Link>
               </div>
-              <div className="secondmid">
-                <h2>EXPLORE</h2>
+              <div className="secondmid navli">
+                <Link to="/explore" style={{ textDecoration: "none",color: "#eb5b1d"}}>
+                  <h2>EXPLORE</h2>
+                </Link>
               </div>
-              <div className="thirdmid">
+              <div className="thirdmid navli">
+                <Link to="/about" style={{ textDecoration: "none", color: "#eb5b1d"}}>
                 <h2>ABOUT US</h2>
+                </Link>
               </div>
-              <div className="fourthmid">
-                <h2>CONTACT</h2>
+              <div className="fourthmid navli">
+              <Link to="/about" style={{ textDecoration: "none", color: "#eb5b1d"}}>
+                <h2>CONTACT US</h2>
+                </Link>
               </div>
         </div>
         <div className="rightnav">
           {isAuthenticated ? (<ProfileImage/>) : (
             <div className="btn_cont">
-            <button className='btn'>JOIN NOW</button>
+            <button className='btn'>
+              <Link to="/login" style={{ textDecoration: "none" }}>
+              JOIN NOW
+              </Link>
+            </button>
           </div>
           )}
         </div>
