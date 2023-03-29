@@ -46,11 +46,12 @@
     width: 20%;
     height: 100%;
     position: relative;
+    /* margin: auto; */
     background-color: transparent;
     display: flex;
 }
 .searchLogo{
-    width: 100%;
+    width: 40%;
     position: relative;
     margin: auto;
 }

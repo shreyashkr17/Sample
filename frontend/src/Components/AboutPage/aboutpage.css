@@ -171,3 +171,59 @@
     /* top: -5%; */
 }
 
+
+
+/* Responsive from 1100px to 850px */
+
+@media screen and (max-width:1100px) {
+    .h11 h1{
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width:850px) {
+    .h11 h1{
+        font-size: 2em;
+    }
+    .abtPoster1{
+        width: 45%;
+    }
+    .abtPoster2{
+        display: none;
+    }
+    .abtPoster3{
+        width: 27.5%;
+    }
+}
+@media screen and (max-width:690px) {
+    .h11 h1{
+        font-size: 1.5em;
+    }
+    .abtPosterCont{
+        height: 70%;
+    }
+}
+@media screen and (max-width:550px){
+    .h11 h1{
+        /* margin: %; */
+        font-size: 1.3em;
+    }
+    .aboutpage{
+        height: 90vh;
+    }
+    .abtPoster1{
+        width: 75%;
+    }
+    .abtPoster3{
+        /* width: 27.5%; */
+        display: none;
+    }
+    .abtPosterCont{
+        height: 70%;
+    }
+}
+@media screen and (max-width:450px){
+    .h11 h1{
+        /* margin: %; */
+        font-size: 1em;
+    }
+}

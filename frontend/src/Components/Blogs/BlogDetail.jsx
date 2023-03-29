@@ -25,7 +25,7 @@ function BlogDetail() {
       <div>
         <h1>{data.heading}</h1>
         <p>{data.desc}</p>
-        <img src={data.image} alt="" />
+        <img className='blogImage' src={data.image} alt="" />
       </div>
     </>
   )

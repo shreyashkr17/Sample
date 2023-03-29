@@ -20,24 +20,24 @@ const Navbar = () => {
         </div>
         <div className="midnav">
               <div className="firstmid navli">
-                <Link to="/" style={{ textDecoration: "none" , color: "#eb5b1d"}}>
+                <Link to="/" style={{ textDecoration: "none" , color: "rgb(255, 149, 0)"}}>
                   <h2>
                     HOME
                   </h2>
                 </Link>
               </div>
               <div className="secondmid navli">
-                <Link to="/explore" style={{ textDecoration: "none",color: "#eb5b1d"}}>
+                <Link to="/explore" style={{ textDecoration: "none",color: "rgb(255, 149, 0)"}}>
                   <h2>EXPLORE</h2>
                 </Link>
               </div>
               <div className="thirdmid navli">
-                <Link to="/about" style={{ textDecoration: "none", color: "#eb5b1d"}}>
+                <Link to="/about" style={{ textDecoration: "none", color: "rgb(255, 149, 0)"}}>
                 <h2>ABOUT US</h2>
                 </Link>
               </div>
               <div className="fourthmid navli">
-              <Link to="/about" style={{ textDecoration: "none", color: "#eb5b1d"}}>
+              <Link to="/about" style={{ textDecoration: "none", color: "rgb(255, 149, 0)"}}>
                 <h2>CONTACT US</h2>
                 </Link>
               </div>

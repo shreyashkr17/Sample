@@ -39,7 +39,7 @@
     align-content: center;
 }
 .logo{
-    width: 4rem;
+    width: 2.5rem;
     height: 4rem;
     margin: auto;
 }
@@ -97,11 +97,7 @@
 .firstmid h2{
     font-weight: bold;
     font-size: 1.3em;
-<<<<<<< HEAD
-    color: rgb(255, 149, 0);
-=======
     color: #eb5b1d;
->>>>>>> 3a0e39b06f5688c0261b47621e11b595a0f5b5e9
     opacity: 0.7;
     cursor: pointer;
 }
@@ -120,11 +116,7 @@
 .secondmid h2{
     font-weight: bold;    
     font-size: 1.3em;
-<<<<<<< HEAD
-    color: rgb(255, 149, 0);
-=======
     color: #eb5b1d;
->>>>>>> 3a0e39b06f5688c0261b47621e11b595a0f5b5e9
     opacity: 0.7;
     cursor: pointer;
 }
@@ -162,11 +154,7 @@
 .fourthmid h2{
     font-weight: bold;
     font-size: 1.3em;
-<<<<<<< HEAD
-    color: rgb(255, 149, 0);
-=======
     color: #eb5b1d;
->>>>>>> 3a0e39b06f5688c0261b47621e11b595a0f5b5e9
     opacity: 0.7;
     cursor: pointer;
 } */
@@ -174,7 +162,7 @@
     font-family: 'Alkatra', cursive !important;
     font-weight: bold;
     font-size: 1rem;
-    color: #eb5b1d;
+    color: rgb(255, 149, 0);
     opacity: 0.7;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -305,7 +293,7 @@
     }
     .menu{
         margin-left: 25%;
-        color: #ff5934;
+        color: rgb(255, 149, 0);
         font-size: large;
     }
 }
