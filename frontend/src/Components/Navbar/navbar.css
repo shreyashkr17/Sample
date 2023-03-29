@@ -55,7 +55,7 @@
 }
 .Header h1{
     /* color: #ff5934; */
-    color: rgba(218,83,53,1);
+    color: rgb(255, 149, 0);
     /* -webkit-text-stroke-width: 0.01px;
     -webkit-text-stroke-color: rgba(13, 135, 0, 0.862); */
     /* font-weight: 400; */
@@ -89,11 +89,14 @@
     justify-content: center;
     align-content: center;
 }
+.firstmid a{
+    text-decoration: none;
+}
 .firstmid h2{
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
-    color: #ff5934;
+    color: rgb(255, 149, 0);
     opacity: 0.7;
     cursor: pointer;
 }
@@ -109,11 +112,14 @@
     justify-content: center;
     align-content: center;
 }
+.secondmid a{
+    text-decoration: none;
+}
 .secondmid h2{
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;    
     font-size: 1.3em;
-    color: #ff5934;
+    color: rgb(255, 149, 0);
     opacity: 0.7;
     cursor: pointer;
 }
@@ -129,11 +135,14 @@
     justify-content: center;
     align-content: center;
 }
+.thirdmid a{
+    text-decoration: none;
+}
 .thirdmid h2{
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
-    color: #ff5934;
+    color: rgb(255, 149, 0);
     opacity: 0.7;
     cursor: pointer;
 }
@@ -149,11 +158,14 @@
     justify-content: center;
     align-content: center;
 }
+.fourthmid a{
+    text-decoration: none;
+}
 .fourthmid h2{
     font-family: 'Paytone One', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
-    color: #ff5934;
+    color: rgb(255, 149, 0);
     opacity: 0.7;
     cursor: pointer;
 }

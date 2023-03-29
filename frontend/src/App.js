@@ -11,6 +11,7 @@ import Map from "./Components/Map/Map"
 import UpdateProfile from './Components/User/UpdateProfile';
 import Blog from "./Components/Blogs/blogcards"
 import DiseaseDetail from './Components/DiseaseDetail/DiseaseDetail';
+import Aboutpage from './Components/AboutPage/Aboutpage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/profile/update" element={<UpdateProfile/>} />
         <Route path="/explore" element={<Explore/>} />
         <Route path="/map" element={<Map/>} />
+        <Route path="/aboutpage" element={<Aboutpage/>} />
         {/* <Route path="#blogs" element={<Blog/>} /> */}
         {/* <Route path="/blogs" element={<Blog/>} /> */}
       </Routes>

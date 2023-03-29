@@ -1,8 +1,9 @@
 .imageContainer > img {
     position: absolute;
-    width: 5vmax;
-    height: 5vmax;
-    top: 10%;
+    width: 4vmax;
+    height: 4vmax;
+    top: 20%;
     right: 20%;
     border-radius: 100%;
+    cursor: pointer;
   }

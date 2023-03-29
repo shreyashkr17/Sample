@@ -169,6 +169,10 @@ const Map = () => {
     marker12.setPopup(popup12).togglePopup();
     marker13.setPopup(popup13).togglePopup();
     marker14.setPopup(popup14).togglePopup();
+    marker15.setPopup(popup15).togglePopup();
+    marker16.setPopup(popup16).togglePopup();
+    marker17.setPopup(popup17).togglePopup();
+    marker18.setPopup(popup18).togglePopup();
 
     setMap(map);
     

@@ -7,6 +7,7 @@ import logo from "../../Assets/ayurLogo.png"
 import MenuIcon from '@mui/icons-material/Menu';
 import { useSelector } from 'react-redux';
 import ProfileImage from '../User/ProfileImage';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -23,16 +24,24 @@ const Navbar = () => {
         </div>
         <div className="midnav">
               <div className="firstmid">
-                <h2>HOME</h2>
+                <Link to="/">
+                  <h2>HOME</h2>
+                </Link>
               </div>
               <div className="secondmid">
-                <h2>EXPLORE</h2>
+                <Link to="/explore">
+                  <h2>EXPLORE</h2>
+                </Link>
               </div>
               <div className="thirdmid">
-                <h2>ABOUT US</h2>
+                <Link to="/aboutpage">
+                  <h2>ABOUT US</h2>
+                </Link>
               </div>
               <div className="fourthmid">
-                <h2>CONTACT</h2>
+                <Link to="#">
+                  <h2>CONTACT</h2>
+                </Link>
               </div>
         </div>
         <div className="rightnav">
