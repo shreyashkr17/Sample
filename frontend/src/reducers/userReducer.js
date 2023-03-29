@@ -33,10 +33,13 @@ export const userReducer = (state = { user: {} }, action) => {
     case GOOGLE_AUTH_REQUEST:
     case FACEBOOK_AUTH_REQUEST:
     case GITHUB_AUTH_REQUEST:
-    case LOAD_USER_REQUEST:
       return {
         loading: true,
         isAuthenticated: false,
+      };
+    case LOAD_USER_REQUEST:
+      return {
+        loading: true,
       };
     case LOGIN_SUCCESS:
     case REGISTER_USER_SUCCESS:

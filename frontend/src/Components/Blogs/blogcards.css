@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@700&display=swap');
 
 .blogsupdate{
-    background-color: white;
+    /* background-color: rgb(225, 52, 52); */
     width:100%;
-    height: 170vh;
-    position: absolute;
+    /* height: 170vh; */
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    top: 70%;
+    /* top: 70%; */
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .blogcard1{
-    width: 80vw;
-    height: 20vh;
+    width: 70vw;
+    /* height: 20vh; */
     /* background-color: black; */
     margin: auto;
     /* border-radius: 20px; */
@@ -24,14 +26,17 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .blog_topic_one_liner{
     width: 88%;
     height: 100%;
     background-color: transparent;
-    position: relative;
+    /* position: relative; */
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
 }
 .blog_topic_two_liner{
     width: 88%;
@@ -42,10 +47,10 @@
     
 }
 .blog_topic_one_liner h1{
-    position: relative;
+    /* position: relative;
     top: 35%;
-    left: 5%;
-    /* margin:3% 10%; */
+    left: 5%; */
+    padding:3% 5%;
     font-family: 'Eczar', serif;
     font-size: 1.5em;
 }
@@ -82,4 +87,13 @@
     to{
         transform: translateX(40px);
     }
+}
+
+.newDiv{
+    position: relative;
+    width: 70%;
+    height: 20%;
+    background-color: red;
+    color: white;
+    z-index: 1000;
 }

@@ -54,15 +54,15 @@ export const loginUser = (email, password) => async (dispatch) => {
           const userRef = await getDocs(collection(db, "users"));
           const docs = userRef.docs.find((doc) => doc.id === users.uid);
           if (docs) {
-            const userData = docs;
+            const userData = docs.data();
             console.log(userData);
+            dispatch({
+              type: LOGIN_SUCCESS,
+              payload: userData,
+            });
           }
         })();
 
-        dispatch({
-          type: LOGIN_SUCCESS,
-          payload: users,
-        });
       })
       .catch((error) => {
         const errorCode = error.code;

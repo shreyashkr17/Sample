@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "firebase/firestore";
 import MetaData from "../layouts/MetaData";
 import "./Search.css";
@@ -12,6 +12,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { getDisease } from "../../actions/diseaseAction";
 import { useNavigate } from "react-router-dom";
+import { useAlert } from "react-alert";
 
 
 import searchLogo from "../../Assets/ayurLogo.png";
@@ -22,21 +23,24 @@ const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
 
-  const {disease, loading} = useSelector((state) => state.diseases);
+  const {error, disease, loading} = useSelector((state) => state.diseases);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const alert = useAlert();
 
   const handleSearch = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     dispatch(getDisease(searchQuery));
-
-    if(!loading){
-      await setTimeout(() => {
-      }, 15000);
-      navigate(`/disease/${disease._id}`);
-    }
+    navigate(`/disease/${disease.id}`);
   };
+
+  useEffect(() => {
+    if(error){
+      alert.info("No such Disease Found");
+    }
+  }, [])
+  
   
 
   const handleInputChange = async (event) => {

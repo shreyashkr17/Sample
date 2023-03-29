@@ -32,8 +32,9 @@
 }
 
 .remedies_container{
+    display: flex;
     max-width: 80%;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.179);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 
@@ -48,6 +49,7 @@
   margin-bottom: 0.4rem;
   font-family: 'Nunito', sans-serif;
   text-decoration: underline;
+  color: rgb(0, 174, 0);
 }
 
 .Rem_heading{
@@ -64,4 +66,8 @@
 
 .precautionSec>ul{
     padding-left: 1rem;
+}
+
+.imageBox>img{
+    width: 20rem;
 }

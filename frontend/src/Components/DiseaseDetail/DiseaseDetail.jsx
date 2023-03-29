@@ -6,7 +6,11 @@ import Navbar from "../Navbar/navbar";
 import "./DiseaseDetail.css";
 
 function DiseaseDetail() {
-  const { loading, disease } = useSelector((state) => state.diseases);
+  const { error, loading, disease } = useSelector((state) => state.diseases);
+  if (error) {
+    alert.info("No such Disease Found");
+    console.log(error);
+  }
 
   return (
     <>
@@ -22,29 +26,34 @@ function DiseaseDetail() {
               <h3 className="intro">
                 Here are some ayurvedic materials to cure {disease.Disease_Name}
               </h3>
-              <div>
+              <div className="info">
                 {disease.Remidies &&
                   disease.Remidies.map((remedy) => (
                     <div className="remedies_container">
-                      <div className="material Rem_heading">
-                        <h2>{remedy.material}</h2>
+                      <div>
+                        <div className="material Rem_heading">
+                          <h2>{remedy.material}</h2>
+                        </div>
+                        <div className="dirOfUse Rem_heading">
+                          <h3>Direction of Use</h3>
+                          <p>{remedy.dir_for_use}</p>
+                        </div>
+                        <div className="precautionSec Rem_heading">
+                          <h3>Precautions</h3>
+                          <ul>
+                            {remedy.Precautions &&
+                              remedy.Precautions.map((precaution) => (
+                                <li>{precaution}</li>
+                              ))}
+                          </ul>
+                        </div>
+                        <div className="alternatives Rem_heading">
+                          <h3>Ayurvedic Products available in market</h3>
+                          <p>{remedy.Alternatives}</p>
+                        </div>
                       </div>
-                      <div className="dirOfUse Rem_heading">
-                        <h3>Direction of Use</h3>
-                        <p>{remedy.dir_for_use}</p>
-                      </div>
-                      <div className="precautionSec Rem_heading">
-                        <h3>Precautions</h3>
-                        <ul>
-                          {remedy.Precautions &&
-                            remedy.Precautions.map((precaution) => (
-                              <li>{precaution}</li>
-                            ))}
-                        </ul>
-                      </div>
-                      <div className="alternatives Rem_heading">
-                        <h3>Ayurvedic Products available in market</h3>
-                        <p>{remedy.Alternatives}</p>
+                      <div className="imageBox">
+                        <img src={remedy.Image} alt="image" />
                       </div>
                     </div>
                   ))}

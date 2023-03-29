@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -10,12 +10,16 @@ import { logoutUser } from '../../actions/userAction'
 import Navbar from '../Navbar/navbar'
 import { collection, getDocs } from 'firebase/firestore'
 import { auth, db } from '../../firebase'
-import userMale from "../../Assets/userMale.png"
+// import userMale from "../../Assets/userMale.png"
+import DefaultImg from "../../Assets/yogaHerbs.png"
 
 function Profile() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const {user, loading, isAuthenticated} = useSelector((state) => state.user)
+    
+    const [image, setImage] = useState(user && user.avatar ? user.avatar : DefaultImg);
+    // const image = user.avatar ? user.avatar : DefaultImg;
 
     const logoutTrigger = async() => {
       dispatch(logoutUser());
@@ -23,14 +27,13 @@ function Profile() {
     }
 
     useEffect(()=>{
-      if(!user){
-        navigate("/login");
-      }
-        if(isAuthenticated === false || user === null){
-          dispatch(logoutUser());
-            navigate("/login");
+        if(user && user.avatar === ""){
+          setImage(DefaultImg);
         }
-    },[isAuthenticated, navigate, dispatch, user])
+        else{
+          setImage(user.avatar);
+        }
+    },[user, setImage])
 
   return (
     <>
@@ -49,7 +52,7 @@ function Profile() {
                     <div className="left_profile">
                       <div className="left_profile_container">
                         <div className="profile_img">
-                          <img src={user.avatar} alt={user.name} className="userImg" />
+                          <img src={image} alt={user.name} className="userImg" />
                         </div>
                         <div className="profile_func_btn">
                           {/* <h3>{user.name}</h3> */}
@@ -129,13 +132,17 @@ function Profile() {
                           )}
                         </div>
                         <div className="section1">
-                            {user.country && user.state && user.city || (
+                            {(user.country || user.state || user.city) && (
                               <>
                                 <div className="locationLabel">
                                   <label className="locationLabelUser">Location :</label>
                                 </div>
                                 <div className="locationUser">
-                                  <h5 className="location">{user.city},{user.state},{user.country}</h5>
+                                  <h5 className="location">
+                                    {user.city && user.city + ", "}
+                                    {user.state && user.state + ", "}
+                                    {user.country && user.country}
+                                  </h5>
                                 </div>
                               </>
                             )}
