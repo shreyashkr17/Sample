@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -17,6 +17,9 @@ function Profile() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const {user, loading, isAuthenticated} = useSelector((state) => state.user)
+    
+    const [image, setImage] = useState(user && user.avatar ? user.avatar : DefaultImg);
+    // const image = user.avatar ? user.avatar : DefaultImg;
 
     const logoutTrigger = async() => {
       dispatch(logoutUser());
@@ -24,10 +27,13 @@ function Profile() {
     }
 
     useEffect(()=>{
-      if(user.avatar === ""){
-        user.avatar = DefaultImg;
-      }
-    },[navigate, user])
+        if(user && user.avatar === ""){
+          setImage(DefaultImg);
+        }
+        else{
+          setImage(user.avatar);
+        }
+    },[user, setImage])
 
   return (
     <>
@@ -46,7 +52,7 @@ function Profile() {
                     <div className="left_profile">
                       <div className="left_profile_container">
                         <div className="profile_img">
-                          <img src={user.avatar} alt={user.name} className="userImg" />
+                          <img src={image} alt={user.name} className="userImg" />
                         </div>
                         <div className="profile_func_btn">
                           {/* <h3>{user.name}</h3> */}

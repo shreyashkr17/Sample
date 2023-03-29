@@ -98,9 +98,12 @@ function UpdateProfile() {
     }
     if (isUpdated) {
       alert.success("Profile Updated Successfully");
-      navigate("/profile");
+      
       setTimeout(() => {
         dispatch(loadUser(user.uid));
+        setTimeout(() => {
+          navigate("/profile");
+        }, 600);
       }, 500);
       dispatch({
         type: UPDATE_PROFILE_RESET,

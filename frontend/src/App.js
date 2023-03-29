@@ -6,12 +6,13 @@ import Home from "./Components/HomePage/Home";
 import Login from "./Components/User/Login";
 import Register from "./Components/User/Register";
 import Profile from "./Components/User/Profile";
-import Explore from "./Components/Explore/explore";
+import Explore from "./Components/Explore/Explore";
 import Map from "./Components/Map/Map";
 import UpdateProfile from "./Components/User/UpdateProfile";
-import Blog from "./Components/Blogs/blogcards";
+import Blog from "./Components/Blogs/Blogcards";
 import DiseaseDetail from "./Components/DiseaseDetail/DiseaseDetail";
 import { useSelector } from "react-redux";
+import BlogDetail from "./Components/Blogs/BlogDetail";
 
 function App() {
   const { disease } = useSelector((state) => state.diseases);
@@ -31,6 +32,7 @@ function App() {
         <Route path="/profile/update" element={<UpdateProfile />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/map" element={<Map />} />
+        <Route path="/blog/:id" element={<BlogDetail/>} />
         {/* <Route path="#blogs" element={<Blog/>} /> */}
         {/* <Route path="/blogs" element={<Blog/>} /> */}
       </Routes>
