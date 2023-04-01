@@ -27,8 +27,9 @@ function Profile() {
     }
 
     useEffect(()=>{
-        if(user && user.avatar === ""){
+        if(user && user.avatar === null){
           setImage(DefaultImg);
+          user.avatar = DefaultImg;
         }
         else{
           setImage(user.avatar);
@@ -43,11 +44,11 @@ function Profile() {
             <Navbar/>
             <div className="profileContainer">
                 <div className="profile_inner">
-                  <div className="top_profile">
+                  {/* <div className="top_profile">
                     <div className="top_profile_container">
                       <h1>MY PROFILE</h1>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="down_profile">
                     <div className="left_profile">
                       <div className="left_profile_container">
@@ -55,7 +56,6 @@ function Profile() {
                           <img src={image} alt={user.name} className="userImg" />
                         </div>
                         <div className="profile_func_btn">
-                          {/* <h3>{user.name}</h3> */}
                           <Link to = "/profile/update" className='edit_profile'>
                             <button>EDIT PROFILE</button>
                           </Link>
@@ -66,67 +66,65 @@ function Profile() {
                     <div className="right_profile">
                       <div className="right_profile_container">
                         <div className="section1">
-                          <div className="name_label">
-                            <label className="nameLabel">Name :</label>
+                          <div className="Label">
+                            <label>Name :</label>
                           </div>
-                          <div className="nameUser">
-                            <h5 className='headNameUser'>{user.name}</h5>
+                          <div className="Value">
+                            <h5>{user.name}</h5>
                           </div>
                         </div>
                         <div className="section1">
-                          <div className="email_label">
+                          <div className="Label">
                             <label>Email : </label>
                           </div>
-                          <div className="emailName">
-                            <h5 className='emailUser'>{user.email}</h5>
+                          <div className="Value">
+                            <h5>{user.email}</h5>
                           </div>
                         </div>
                         <div className="section1">
                           {user.mobile && (
                             <>
-                              <div className="Phonelabel">
-                                <label className='labelUser'>Phone No. :</label>
+                              <div className="Label">
+                                <label>Phone No. :</label>
                               </div>
-                              <div className='numberUser'>
-                                <h5 className='number'>{user.mobile}</h5>
+                              <div className='Value'>
+                                <h5>{user.mobile}</h5>
                               </div>
                             </>
                           )}
                         </div>
                         <div className="section1">
-                            <div className="left_section1">
-                                {user.age && (
-                                  <>
-                                    <div className="Agelabel">
-                                      <label className="ageLabelUser">Age :</label>
-                                    </div>
-                                    <div className="ageUser">
-                                      <h5 className="age">{user.age}</h5>
-                                    </div>
-                                  </>
-                                )}
-                            </div>
-                            <div className="right_section1">
-                                {user.gender && (
-                                  <>
-                                    <div className="Genderlabel">
-                                      <label className="genderLabelUser">Gender :</label>
-                                    </div>
-                                    <div className="genderUser">
-                                      <h5 className="gender">{user.gender}</h5>
-                                    </div>
-                                  </>
-                                )}
-                            </div>
+                          {user.age && (
+                            <>
+                              <div className="Label">
+                                <label>Age :</label>
+                              </div>
+                              <div className="Value">
+                                <h5>{user.age}</h5>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                        <div className="section1">
+                          {user.gender && (
+                            <>
+                              <div className="Label">
+                                <label>Gender :</label>
+                              </div>
+                              <div className="Value">
+                                <h5>{user.gender}</h5>
+                              </div>
+                            </>
+                          )}
                         </div>
                         <div className="section1">
                           {user.dob && (
                             <>
-                              <div className="dobLabel">
-                                <label className="dobLabelUser">Date Of Birth :</label>
+                              <div className="Label">
+                                <label>D.O.B. :</label>
                               </div>
-                              <div className="dobUser">
-                                <h5 className="dob">{user.dob}</h5>
+                              <div className="Value">
+                                <h5>{user.dob}</h5>
                               </div>
                             </>
                           )}
@@ -134,11 +132,11 @@ function Profile() {
                         <div className="section1">
                             {(user.country || user.state || user.city) && (
                               <>
-                                <div className="locationLabel">
-                                  <label className="locationLabelUser">Location :</label>
+                                <div className="Label">
+                                  <label>Location :</label>
                                 </div>
-                                <div className="locationUser">
-                                  <h5 className="location">
+                                <div className="Value">
+                                  <h5>
                                     {user.city && user.city + ", "}
                                     {user.state && user.state + ", "}
                                     {user.country && user.country}

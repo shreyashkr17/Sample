@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import {
   createUserWithEmailAndPassword,
   FacebookAuthProvider,
@@ -43,6 +42,8 @@ import {
   githubProvider,
   googleProvider,
 } from "../firebase";
+
+import DefaultImg from "../Assets/yogaHerbs.png";
 
 export const loginUser = (email, password) => async (dispatch) => {
   try {
@@ -105,6 +106,7 @@ export const registerUser = (name, email, password) => async (dispatch) => {
         const userRef = await getDocs(collection(db, "users"));
         const docs = userRef.docs.find((doc) => doc.id === data.uid);
         if (!docs) {
+          const profileImg = data.photoURL ? data.photoURL : DefaultImg;
           const user = {
             uid: data.uid,
             email: data.email,
@@ -117,7 +119,7 @@ export const registerUser = (name, email, password) => async (dispatch) => {
             country: "",
             dob: "",
             mobile:"",
-            avatar: data.photoURL,
+            avatar: profileImg,
           };
           await setDoc(doc(db, "users", data.uid), user);
           dispatch({
@@ -162,6 +164,7 @@ export const authWithGoogle = () => async (dispatch) => {
       // console.log(userRef.data());
         if (!docs) {
           //set the doc id equal to data.uid
+          const profileImg = data.photoURL ? data.photoURL : DefaultImg;
           const user = {
             uid: data.uid,
             email: data.email,
@@ -174,7 +177,7 @@ export const authWithGoogle = () => async (dispatch) => {
             country: "",
             dob: "",
             mobile:"",
-            avatar: data.photoURL,
+            avatar: profileImg,
           };
           await setDoc(doc(db, "users", data.uid), user);
           dispatch({
@@ -217,6 +220,7 @@ export const authWithFacebook = () => async (dispatch) => {
         const docs = userRef.docs.find((doc) => doc.id === data.uid);
         console.log(doc);
         if (!docs) {
+          const profileImg = data.photoURL ? data.photoURL : DefaultImg;
           const user = {
             uid: data.uid,
             email: data.email,
@@ -229,7 +233,7 @@ export const authWithFacebook = () => async (dispatch) => {
             country: "",
             dob: "",
             mobile:"",
-            avatar: data.photoURL,
+            avatar: profileImg,
           };
           await setDoc(doc(db, "users", data.uid), user);
           dispatch({
