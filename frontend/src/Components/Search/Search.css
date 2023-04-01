@@ -38,7 +38,7 @@
 
     display: flex;
     flex-direction: row;
-    color: rgba(218,83,53,1);
+    color: rgb(255, 149, 0);
     
     cursor: none;
 }
@@ -46,11 +46,12 @@
     width: 20%;
     height: 100%;
     position: relative;
+    /* margin: auto; */
     background-color: transparent;
     display: flex;
 }
 .searchLogo{
-    width: 100%;
+    width: 40%;
     position: relative;
     margin: auto;
 }
