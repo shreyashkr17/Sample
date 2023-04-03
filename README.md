@@ -1,7 +1,5 @@
 # VedicHeals-GFG
 
-# DOCUMENTATION
-
 # INTRODUCTION
 
 Our project on HEALTHCARE aims to provide people with alternative options for managing their health and wellness. By offering 
