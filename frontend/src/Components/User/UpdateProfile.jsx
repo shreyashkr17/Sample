@@ -112,7 +112,8 @@ function UpdateProfile() {
     } else {
       console.log(isUpdated);
     }
-  }, [dispatch, error, alert, navigate, user, isUpdated]);
+
+  }, [dispatch, error, alert, navigate, user, isUpdated, loading]);
 
   return (
     <>
@@ -208,18 +209,13 @@ function UpdateProfile() {
                 {country && (
                   <div>
                     <HomeWorkOutlinedIcon />
-                    <select
+                    <input
+                      type="string"
+                      placeholder="State"
+                      name="state"
                       value={state}
                       onChange={(e) => setState(e.target.value)}
-                    >
-                      <option value="">State</option>
-                      {State &&
-                        State.getStatesOfCountry(country).map((item) => (
-                          <option key={item.name} value={item.name}>
-                            {item.name}
-                          </option>
-                        ))}
-                    </select>
+                    />
                   </div>
                 )}
 

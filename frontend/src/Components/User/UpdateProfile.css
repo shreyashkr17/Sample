@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
 .updateProfileContainer {
     width: 100vw;
     height: 100%;
@@ -5,38 +7,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(231, 231, 231);
+    background: #c2e59c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     top: 0%;
     left: 0;
   }
   
   .updateProfileBox {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.374);
     width: 50vw;
     height: 100%;
     box-sizing: border-box;
-    overflow: hidden;
     margin: 3rem;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+
+  .updateProfileBox:hover {
+    scale: 1.01;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.205), 0 0 20px rgba(0, 0, 0, 0.259);
   }
   
   .updateProfileHeading {
     text-align: center;
-    color: rgba(0, 0, 0, 0.664);
-    font: 400 1.3vmax "Roboto";
-    padding: 1.3vmax;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    color: rgb(220, 128, 0);
+    font: 600 3vmax 'Alkatra', cursive !important;
+    padding: 1vmax;
+    border-bottom: 1px solid rgba(204, 119, 0, 0.546);
     width: 50%;
-    margin: auto;
+    margin: 4% auto;
   }
   
   .updateProfileForm {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    margin: 0px auto;
     padding: 2vmax;
     justify-content: space-evenly;
     height: 70%;
+    width: 100%;
     transition: all 0.5s;
   }
   
@@ -95,10 +110,10 @@
   
   .updateProfileBtn {
     border: none;
-    background-color: tomato;
+    background: linear-gradient(to left, rgba(201,125,58,1) 0%, rgba(218,83,53,1) 100%);
     color: white;
     font: 300 0.9vmax "Roboto";
-    width: 100%;
+    width: 50%;
     padding: 0.8vmax;
     cursor: pointer;
     transition: all 0.5s;
@@ -108,7 +123,7 @@
   }
   
   .updateProfileBtn:hover {
-    background-color: rgb(179, 66, 46);
+    background: linear-gradient(to right, rgba(201,125,58,1) 0%, rgba(218,83,53,1) 100%);
   }
   
   @media screen and (max-width: 600px) {
@@ -125,8 +140,8 @@
     }
   
     .updateProfileForm > div > input {
-      padding: 2.5vmax 5vmax;
-      font: 300 1.7vmax cursive;
+      padding: 1vmax 4vmax;
+      font: 300 1vmax cursive;
     }
   
     .updateProfileForm > div > svg {
