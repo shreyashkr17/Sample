@@ -1,6 +1,9 @@
 import React from 'react'
 import "./aboutpage.css"
 import Navbar from "../Navbar/navbar"
+import AboutUsDetail from './AbouUsDetail'
+import Downloads from './Downloads'
+import Footer from "../Footer/Footer"
 
 // import images for poster from Assets
 
@@ -15,6 +18,7 @@ import Poster7 from "../../Assets/7.png"
 
 const Aboutpage = () => {
   return (
+    <>
     <div className='aboutpage'>
       <Navbar/>
       <div className="abtPosterCont">
@@ -59,6 +63,10 @@ const Aboutpage = () => {
         </div>
       </div>
     </div>
+    <AboutUsDetail/>
+    <Downloads/>
+    {/* <Footer/> */}
+    </>
   )
 }
 

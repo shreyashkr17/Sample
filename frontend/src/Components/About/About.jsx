@@ -8,7 +8,7 @@ const About = () => {
     <div className='aboutPage'>
       <div className="leftabt">
         <div className="abtpara">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In assumenda voluptate eaque aliquid iusto corporis commodi esse non, tempore sed. Sint, soluta repellat at libero, dolore quia tempora consectetur asperiores officia, quod doloremque laudantium possimus sed iure molestiae ut accusantium exercitationem itaque assumenda delectus ducimus. Atque incidunt accusamus placeat impedit.
+        Our website is a platform dedicated to providing alternative home remedies for various diseases, along with information on Ayurvedic institutions and hospitals across the country. We also share insightful blogs on the latest researches on diseases to help users stay informed about Ayurvedic medicine. Our mission is to promote natural health and wellness through the use of Ayurvedic remedies and to provide reliable information to our users.
         </div>
       </div>
       <div className="rightabt">

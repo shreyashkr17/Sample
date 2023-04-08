@@ -1,0 +1,139 @@
+.Downloads{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: rgb(0,185,255);
+    background: linear-gradient(to bottom, rgba(0,185,255,1) 0%, rgba(228,246,255,1) 99%);
+}
+.android_dnld{
+    width: 100%;
+    height: 60%;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+/* .web_dnld{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+} */
+.mob_container{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.mob_head_dnld{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    position: relative;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 14.5px );
+    -webkit-backdrop-filter: blur( 14.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-left: 5%;
+}
+.mob_head_dnld h1{
+    margin: auto;
+    font-family: 'Yeseva One', cursive;
+    font-size: 2.5em;
+    line-height: 70px;
+}
+.mob_svg{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+.googlePLay{
+    width: 50%;
+    height: 13%;
+    position: absolute;
+    top: 87%;
+    /* left: 15%; */
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px -5px 10px black;
+}
+.app_link{
+    position: absolute;
+    top: 70%;
+    left: 6%;
+    display: none;
+}
+.app_link a{
+    text-decoration: double underline;
+    color: black;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+    .mob_head_dnld h1{
+        font-size: 2.1em;
+    }
+}
+@media screen and (max-width:800px) {
+    .mob_head_dnld h1{
+        font-size: 1.8em;
+    }
+}
+@media screen and (max-width:768px) {
+    .mob_svg{
+        display: none;
+    }
+    .mob_container{
+        width: 100%;
+    }
+    .mob_head_dnld h1{
+        font-size: 1.6em;
+    }
+    .app_link{
+        display: inline-block;
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width:768px) {
+    .Downloads{
+        height: 70vh;
+    }
+    .mob_head_dnld h1{
+        font-size: 1.3em;
+    }
+    .app_link{
+        /* display: inline-block; */
+        font-size: 0.5em;
+    }
+    .mob_head_dnld h1{
+        line-height: 30px;
+    }
+}
