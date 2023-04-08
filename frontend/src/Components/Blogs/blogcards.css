@@ -53,6 +53,11 @@
     padding:3% 5%;
     font-family: 'Eczar', serif;
     font-size: 1.5em;
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
 }
 .blog_topic_two_liner h1{
     position: relative;

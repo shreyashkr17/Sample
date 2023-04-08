@@ -4,11 +4,12 @@ import "./about.css"
 import GURU from "../../Assets/yogaHerbs.png"
 
 const About = () => {
+
   return (
     <div className='aboutPage'>
       <div className="leftabt">
         <div className="abtpara">
-        Our website is a platform dedicated to providing alternative home remedies for various diseases, along with information on Ayurvedic institutions and hospitals across the country. We also share insightful blogs on the latest researches on diseases to help users stay informed about Ayurvedic medicine. Our mission is to promote natural health and wellness through the use of Ayurvedic remedies and to provide reliable information to our users.
+        VedicHeal is a website that provides ayurvedic solutions for health and wellness needs. Ayurveda is a holistic system of medicine that originated in India and has been practiced for thousands of years. It is based on harmony between the mind, body, and spirit and uses natural methods such as herbs, diet, lifestyle, and therapies to prevent and treat diseases. VedicHeal's team of qualified and experienced ayurvedic professionals are committed to sharing their knowledge and expertise with you. VedicHeal is a platform where you can discover the wonders of Ayurveda and its impact on your life.
         </div>
       </div>
       <div className="rightabt">

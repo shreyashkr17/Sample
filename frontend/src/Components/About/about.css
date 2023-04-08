@@ -1,6 +1,6 @@
 .aboutPage{
     width: 100%;
-    height: 60vh;
+    /* height: 60vh; */
     background-color: #ebfce3;
     position: absolute;
     display: flex;
@@ -15,7 +15,7 @@
     width: 60%;
     height: 100%;
     background-color: transparent;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .abtpara{
     width: 95%;
@@ -90,7 +90,7 @@
 @media screen and (max-width:700px) {
     .aboutPage{
         flex-direction: column;
-        height: 75vh;
+        /* height: 75vh; */
     }
     .abtpara{
         font-size: 1em;

@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navbar from '../Navbar/navbar';
 import About from '../About/About';
 import Footer from "../Footer/Footer"
 import "./home.css";
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../../firebase';
-import { onAuthStateChanged } from 'firebase/auth';
 import { useSelector } from 'react-redux';
 
 const Home = () => {
 
     const [path, setPath] = useState("/register");
     const {user} = useSelector((state) => state.user);
-
 
     useEffect(() => {
       if(user){
@@ -25,6 +22,7 @@ const Home = () => {
     
 
   return (
+    <>
     <div>
         <Navbar/>
         <div className="homepage">
@@ -42,6 +40,7 @@ const Home = () => {
         <About/>
         <Footer/>
     </div>
+    </>
   )
 }
 
