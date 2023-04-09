@@ -12,7 +12,7 @@ const persistConfig = {
   storage,
   // Set an expiration time of 30 minutes
   // expires: 3 * 1000, // 30 minutes
-  expires: 3 * 24 * 60 * 60 * 1000, // 3 days
+  expires: 3 * 24 * 60 * 1000, // 3 days
 };
 
 const reducer = combineReducers({
