@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer"
 import "./home.css";
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import MetaData from '../layouts/MetaData';
 
 const Home = () => {
 
@@ -23,8 +24,9 @@ const Home = () => {
 
   return (
     <>
+    <MetaData title='VedicHeal' />
+    <Navbar/>
     <div>
-        <Navbar/>
         <div className="homepage">
             <div className="container_upper">
                 <div className="tag">

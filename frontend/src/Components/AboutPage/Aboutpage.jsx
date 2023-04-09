@@ -14,17 +14,19 @@ import Poster4 from "../../Assets/4.png"
 import Poster5 from "../../Assets/5.png"
 import Poster6 from "../../Assets/6.png"
 import Poster7 from "../../Assets/7.png"
+import MetaData from '../layouts/MetaData'
 
 
 const Aboutpage = () => {
   return (
     <>
+    <MetaData title="About Us - VedicHeal" />
     <div className='aboutpage'>
       <Navbar/>
       <div className="abtPosterCont">
         <div className="upperabtPoster">
-            <span className="h11"><h1>Discover The Natural Healing Power</h1></span>
-            <span className="h11"><h1>of Ayurvedic Medicine</h1></span>
+            <span className="h11"><h1>Discover The Natural Healing Power of</h1></span>
+            <span className="h12"><h1>Ayurvedic Medicine</h1></span>
         </div>
         <div className="downabtPoster">
             <div className="abtPoster3">

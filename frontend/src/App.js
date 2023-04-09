@@ -21,6 +21,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<Aboutpage />} />
         <Route path="/search" element={<Search />} />
         {disease ? (
           <Route path="/disease/:id" element={<DiseaseDetail />} />

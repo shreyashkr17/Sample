@@ -11,6 +11,7 @@ const Navbar = () => {
   const {isAuthenticated} = useSelector((state) => state.user);
 
   return (
+    <>
     <div className='Navbar'>
         <div className="leftnav">
             <img src={logo} alt="" className='logo' />
@@ -59,6 +60,7 @@ const Navbar = () => {
           </div>
         </div>
     </div>
+    </>
   )
 }
 

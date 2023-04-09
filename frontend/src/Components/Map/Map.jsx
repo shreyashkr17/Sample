@@ -5,6 +5,7 @@ import "./map.css";
 
 import "@tomtom-international/web-sdk-maps/dist/maps.css";
 import * as tt from "@tomtom-international/web-sdk-maps";
+import MetaData from "../layouts/MetaData";
 
 const Map = () => {
   const mapElement = useRef();
@@ -180,6 +181,8 @@ const Map = () => {
   },[])
 
   return (
+    <>
+    <MetaData title="Map - VedicHeal" />
     <div className="Map">
       <Navbar />
       <div className="map_container">
@@ -188,6 +191,7 @@ const Map = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
