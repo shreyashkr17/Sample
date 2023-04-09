@@ -1,4 +1,150 @@
-.blogImage{
-    width: 50%;
-    height: 50%;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+.BlogDetailsContainer{
+    width: 100%;
+    /* height: 200%; */
+    /* margin-bottom: 5px; */
+    position: absolute;
+    /* background-color: green; */
+    background: rgb(0,185,255);
+    background: linear-gradient(to bottom, rgb(0, 25, 166) 0%, rgba(228,246,255,1) 99%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 8%;
+}
+.BlogDetailPart{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    padding: 1%;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.BlogPart1{
+    height: 20vh;
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 2%;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px ); */
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.BlogPart1Heading{
+    color: black;
+    margin: auto;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+.BlogPart2{
+    height: 40vh;
+    margin-top: 1%;
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px ); */
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 0.5%;
+}
+.BlogPartImage{
+    width: 30%;
+    height: 100%;
+    background-color:burlywood ;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    border: 4px solid black;
+    /* padding: 1%; */
+}
+.BlogImage{
+    margin: auto;
+    width: 100%;
+}
+.BlogPart3{
+    height: 80%vh;
+    margin-top: 1%;
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    /* justify-content: center;
+    align-content: center; */
+    flex-wrap: wrap;
+    padding: 2%;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.BlogPartDesc p{
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5em;
+    word-spacing: 5px;
+    line-height: 120%;
+}
+
+
+
+
+
+@media screen and (max-width:1300px) {
+    .BlogPart1Heading{
+        font-size: 1.7em;
+    }
+    .BlogPartDesc p{
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width:1000px) {
+    .BlogDetailsContainer{
+        padding-top: 12%;
+    }
+    .BlogPart1Heading{
+        font-size: 1.5em;
+    }
+    .BlogPartDesc p{
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width:700px) {
+    .BlogDetailsContainer{
+        padding-top: 16%;
+    }
+    .BlogPart1Heading{
+        font-size: 1.25em;
+    }
+    .BlogPartDesc p{
+        font-size: 1.1em;
+    }
 }
