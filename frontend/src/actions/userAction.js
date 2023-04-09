@@ -8,7 +8,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import { addDoc, collection, doc, getDocs, setDoc, updateDoc } from "firebase/firestore";
+import { collection, doc, getDocs, setDoc, updateDoc } from "firebase/firestore";
 import {
   CLEAR_ERRORS,
   FACEBOOK_AUTH_FAIL,
@@ -56,7 +56,6 @@ export const loginUser = (email, password) => async (dispatch) => {
           const docs = userRef.docs.find((doc) => doc.id === users.uid);
           if (docs) {
             const userData = docs.data();
-            console.log(userData);
             dispatch({
               type: LOGIN_SUCCESS,
               payload: userData,
@@ -66,7 +65,6 @@ export const loginUser = (email, password) => async (dispatch) => {
 
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         dispatch({
           type: LOGIN_FAIL,
@@ -74,7 +72,6 @@ export const loginUser = (email, password) => async (dispatch) => {
         });
       });
   } catch (error) {
-    const errorCode = error.code;
     const errorMessage = error.message;
     dispatch({
       type: LOGIN_FAIL,
