@@ -114,7 +114,13 @@
 
 /* Responsive at 480px*/
 @media screen and (max-width:480px) {
+    .aboutPage{
+        height: 60vh;
+    }
     .abtpara{
         font-size: 0.8em;
+    }
+    .rightabt{
+        display: none;
     }
 }

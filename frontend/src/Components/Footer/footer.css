@@ -74,3 +74,13 @@
     margin: 0% 3%;
   }
 }
+@media screen and (max-width:400px) {
+  .Footer{
+    height: 45vh;
+  }
+}
+@media screen and (max-width:300px) {
+  .Footer{
+    height: 50vh;
+  }
+}

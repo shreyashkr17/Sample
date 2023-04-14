@@ -208,3 +208,92 @@
     /* border: 1px solid black; */
     margin-top:5px ;
 }
+
+
+@media screen and (max-width:1500px) {
+    .searchBox{
+        height: 100%;
+    }
+    .header_text{
+        font-size: 6.5em;
+    }
+}
+@media screen and (max-width:1300px) {
+    .search_logo_container{
+        left: 43%;
+    }
+    .searchbox_container{
+        width: 900px;
+    }
+    .searchBox{
+        height: 100%;
+    }
+    .header_text{
+        font-size: 6.5em;
+    }
+}
+@media screen and (max-width:1000px) {
+    .search_logo_container{
+        left: 48%;
+        width: 69%;
+    }
+    .searchbox_container{
+        width: 760px;
+    }
+    .left_search_logo{
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .searchbox_container{
+        width: 100%;
+        margin-top: 5%;
+    }
+    .inputSearch{
+        width: 85%;
+    }
+    .srchbtnContainer{
+        width: 15%;
+    }
+    .header_text{
+        font-size: 5.5em;
+    }
+    .search_logo_container{
+        left: 58%;
+        width: 100%;
+        margin-top: 12%;
+    }
+}
+@media screen and (max-width:580px) {
+    .header_text{
+        font-size: 4.6em;
+    }
+    .search_logo_container{
+        left: 54%;
+    }
+    .searchbox_container{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:450px) {
+    .header_text{
+        font-size: 3.8em;
+    }
+    .inputSearch{
+        width: 80%;
+    }
+    .srchbtnContainer{
+        width: 20%;
+    }
+}
+@media screen and (max-width:381px) {
+    .header_text{
+        font-size: 280%;
+    }
+    .inputSearch{
+        width: 78%;
+    }
+    .srchbtnContainer{
+        width: 22%;
+    }
+}
