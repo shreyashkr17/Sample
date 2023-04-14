@@ -30,7 +30,7 @@ const About = () => {
               <img src={GURU} alt="" className='guru_img' />
           </div>
       </div>
-    </div>
+    </>
   )
 }
 
