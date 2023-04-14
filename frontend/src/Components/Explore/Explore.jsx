@@ -11,6 +11,7 @@ import Map from "../../Assets/map.gif";
 import Blogcards from "../Blogs/Blogcards";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
+import MetaData from "../layouts/MetaData";
 
 const Explore = () => {
   let blogs;
@@ -34,6 +35,7 @@ const Explore = () => {
   return (
     <>
       <Navbar />
+      <MetaData title="Explore - VedicHeal" />
       <div className="Explore">
         <div className="explore_page">
           <div className="exp_poster">

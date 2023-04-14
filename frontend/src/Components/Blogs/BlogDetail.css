@@ -74,7 +74,7 @@
     padding: 0.5%;
 }
 .BlogPartImage{
-    width: 30%;
+    width: 32rem;
     height: 100%;
     background-color:burlywood ;
     margin: auto;
@@ -87,6 +87,8 @@
 .BlogImage{
     margin: auto;
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 .BlogPart3{
     height: 80%vh;

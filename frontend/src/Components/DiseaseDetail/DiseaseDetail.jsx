@@ -18,7 +18,7 @@ function DiseaseDetail() {
         <Loader />
       ) : (
         <>
-          <MetaData title={disease.Disease_Name} />
+          <MetaData title={"Disease - " + disease.Disease_Name} />
           <Navbar />
           <div className="disease-detail">
             <div className="Dname">{disease.Disease_Name}</div>
@@ -52,9 +52,9 @@ function DiseaseDetail() {
                           <p>{remedy.Alternatives}</p>
                         </div>
                       </div>
-                      <div className="imageBox">
+                      {remedy.Image && (<div className="imageBox">
                         <img src={remedy.Image} alt="image" />
-                      </div>
+                      </div>)}
                     </div>
                   ))}
               </div>
