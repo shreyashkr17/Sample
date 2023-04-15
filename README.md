@@ -32,7 +32,7 @@ Our project has several key features that can help improve the effectiveness and
 
 a) **Proper direction for using home remedies**: Your project provides guidance on the proper way of using home remedies, which can help individuals to use these remedies safely and effectively. This can prevent adverse reactions and ensure that individuals receive the full benefits of Ayurvedic treatments.
 
-c) **Suggestion of important Ayurvedic medical institutes**: Your project utilizes Google Maps API to suggest important Ayurvedic medical institutes all over India. This can help individuals locate and access high-quality healthcare providers who specialize in Ayurveda.
+b) **Suggestion of important Ayurvedic medical institutes**: Your project utilizes Google Maps API to suggest important Ayurvedic medical institutes all over India. This can help individuals locate and access high-quality healthcare providers who specialize in Ayurveda.
 
 ## **HOW MY PROJECTS WILL HELP HEALTH CARE INDUSTRY IN INDIA:**
 
