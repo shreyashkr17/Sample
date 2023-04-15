@@ -30,9 +30,7 @@ A Web Application and android application that provide people with alternative o
 
 Our project has several key features that can help improve the effectiveness and accessibility of Ayurveda as a healthcare solution:
 
-a) **NLP model for disease recognition**: By using NLP (Natural Language Processing) model of AI to recognize diseases in the search engine, your project can help individuals identify their health issues more accurately and quickly. This can improve the efficiency of healthcare delivery and ensure that individuals receive the appropriate treatment and care.
-
-b) **Proper direction for using home remedies**: Your project provides guidance on the proper way of using home remedies, which can help individuals to use these remedies safely and effectively. This can prevent adverse reactions and ensure that individuals receive the full benefits of Ayurvedic treatments.
+a) **Proper direction for using home remedies**: Your project provides guidance on the proper way of using home remedies, which can help individuals to use these remedies safely and effectively. This can prevent adverse reactions and ensure that individuals receive the full benefits of Ayurvedic treatments.
 
 c) **Suggestion of important Ayurvedic medical institutes**: Your project utilizes Google Maps API to suggest important Ayurvedic medical institutes all over India. This can help individuals locate and access high-quality healthcare providers who specialize in Ayurveda.
 
