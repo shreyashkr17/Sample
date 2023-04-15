@@ -1,14 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./navbar.css"
 import logo from "../../Assets/ayurLogo.png"
 import MenuIcon from '@mui/icons-material/Menu';
 import { useSelector } from 'react-redux';
 import ProfileImage from '../User/ProfileImage';
 import { Link } from 'react-router-dom';
+import SlideNabar from './SlideNabar';
 
 const Navbar = () => {
 
   const {isAuthenticated} = useSelector((state) => state.user);
+
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  function handleClick() {
+    setShowNavbar(!showNavbar);
+  }
 
   return (
     <>
@@ -54,12 +61,13 @@ const Navbar = () => {
           </div>
           )}
         </div>
-        <div className="hamburger">
+        <div className="hamburger" onClick={handleClick}>
           <div className="menucont">
             <MenuIcon className='menu' fontSize='large'/>
           </div>
         </div>
     </div>
+    {showNavbar && <SlideNabar/>}
     </>
   )
 }
