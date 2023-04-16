@@ -24,7 +24,8 @@ A Web Application and android application that provide people with alternative o
 3. **Firebase** is a backend service that provides various features like authentication, database, storage, and hosting. In this project, Firebase has been used as the backend service to store and manage data for the web application.
 4. For identifying the diseases keyword in the search engine, we have used the search query that uses an algorithm to search through its database of indexed web pages and return a list of results that are relevant to the user's query.
 5. **Flutter** is a framework for building cross-platform mobile applications. It allows developers to build apps for both iOS and Android platforms using a single codebase. In this project, the Android application has been developed using Flutter, which provides a fast and efficient way to create mobile applications with a native look and feel.
-6. For Hosting we are using **Google Cloud Platform's Virtual Machine** which we have created using the N2D Machine Type along with CPU platform with AMD Rome, whose architecture is x86/64.
+6. For Hosting we are using **Google Cloud Platform's Virtual Machine** which we have created using the N2D-standard-2 Machine Type along with CPU platform with AMD Rome, whose architecture is x86/64 hosted in destination Zone us-central1-a.
+7.We have purchased the domain www.vedicheal.live from https://www.name.com/ and created a DNS record mapped to the External IP 35.224.70.142 of our Vedicheal-2 VM instance. 
 
 ## **KEY FEATURES**
 
@@ -51,4 +52,13 @@ Your project, which focuses on promoting the use of Ayurveda for managing health
 
 ## **Live App Images**
 ![app](https://user-images.githubusercontent.com/59368657/232286488-2035b9d2-672f-42f9-908f-241ab53c742d.png)
+
+## **VM Instance**
+![image](https://user-images.githubusercontent.com/59368657/232307046-25ee8b83-e5ed-464b-af4a-6f120e329c3f.png)
+![image](https://user-images.githubusercontent.com/59368657/232307393-15f7134a-6824-4bcc-8f91-a731ff75ff75.png)
+![image](https://user-images.githubusercontent.com/59368657/232307323-736e31ba-4a86-4ea8-86ec-344cd6815287.png)
+
+##**Name.com DNS Mapping to our External IP of our VM Instance**
+![image](https://user-images.githubusercontent.com/59368657/232307780-bc11f673-68af-4e50-aec6-d93b95e30d34.png)
+
 
