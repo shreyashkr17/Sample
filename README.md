@@ -58,7 +58,7 @@ Your project, which focuses on promoting the use of Ayurveda for managing health
 ![image](https://user-images.githubusercontent.com/59368657/232307393-15f7134a-6824-4bcc-8f91-a731ff75ff75.png)
 ![image](https://user-images.githubusercontent.com/59368657/232307323-736e31ba-4a86-4ea8-86ec-344cd6815287.png)
 
-##**Name.com DNS Mapping to our External IP of our VM Instance**
+## **Name.com DNS Mapping to our External IP of our VM Instance**
 ![image](https://user-images.githubusercontent.com/59368657/232307780-bc11f673-68af-4e50-aec6-d93b95e30d34.png)
 
 
