@@ -45,3 +45,10 @@ Your project, which focuses on promoting the use of Ayurveda for managing health
 - **Encouraging personalized care**: Ayurveda takes a personalized approach to healthcare by considering an individual's unique constitution, lifestyle, and environment. This can help tailor treatments and remedies to individual needs, leading to more effective and efficient healthcare.
 
 - **Reducing the use of pharmaceuticals**: Ayurveda offers natural remedies and treatments that can reduce the reliance on pharmaceuticals, which can be expensive and may have negative side effects. This can help reduce healthcare costs and improve the overall health and well-being of individuals.
+
+## **Live Website Images**
+![website png](https://user-images.githubusercontent.com/59368657/232286433-c8d61390-2fd8-4733-8d3d-4202c051308c.png)
+
+## **Live App Images**
+![app](https://user-images.githubusercontent.com/59368657/232286488-2035b9d2-672f-42f9-908f-241ab53c742d.png)
+
