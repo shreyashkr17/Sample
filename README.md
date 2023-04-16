@@ -10,6 +10,8 @@ By providing this information, you are offering a valuable resource for individu
 So, our project focuses on home remedies and natural products which clearly aligned with the theme of healthcare because it aims to provide information and resources that promote, health and wellness.
 
 **If the VM Instance is enabled you can view our live hosted website on https://www.vedicheal.live**
+
+**You can view the android app version of our website at https://github.com/DarkNinja15/VedicHeals.git
 ## **RESEARCHES:**
 
 According to a report published by the Ministry of AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy) in 2019, approximately 77% of Indian households use some form of Ayurvedic medicine. This includes both over-the-counter Ayurvedic products and prescriptions from Ayurvedic practitioners.
