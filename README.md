@@ -64,4 +64,5 @@ Your project, which focuses on promoting the use of Ayurveda for managing health
 ## **Name.com DNS Mapping to our External IP of our VM Instance**
 ![image](https://user-images.githubusercontent.com/59368657/232307780-bc11f673-68af-4e50-aec6-d93b95e30d34.png)
 
-
+## **Future Aspects**
+Our future prospects are Use of NLP model for making the app and website more user friendly,Integration of chat gpt through another ai model to filter questions asked,expanding database and shifting server and database from firebase to nodejs and mongodb.
